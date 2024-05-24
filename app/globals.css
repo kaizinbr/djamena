@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+
+    /* --tabasco-50: #fff2f1;
+    --tabasco-100: #ffe2e0;
+    --tabasco-200: #ffcbc7;
+    --tabasco-300: #ffa6a0;
+    --tabasco-400: #ff7369;
+    --tabasco-500: #fa4639;
+    --tabasco-600: #e7291b;
+    --tabasco-700: #c31e12;
+    --tabasco-800: #a81e14;
+    --tabasco-900: #851e17;
+    --tabasco-950: #490b06;
+     */
+
+    --tabasco-50: 255, 242, 241;
+    --tabasco-100: 255, 226, 224;
+    --tabasco-200: 255, 203, 199;
+    --tabasco-300: 255, 166, 160;
+    --tabasco-400: 255, 115, 105;
+    --tabasco-500: 250, 70, 57;
+    --tabasco-600: 231, 41, 27;
+    --tabasco-700: 195, 30, 18;
+    --tabasco-800: 168, 30, 20;
+    --tabasco-900: 133, 30, 23;
+    --tabasco-950: 73, 11, 6;
+
+    --overlay-mix-blend-mode: initial;
+    --overlay-opacity: 1;
+    --overlay-transition: 0.3s;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+} */
+
+body {
+    /* color: rgb(var(--foreground-rgb)); */
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+    overflow-x: hidden;
+    
+    font-family: "Lato", sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+.bg-tabasco-50 {
+    background-color: rgba(var(--tabasco-50), 1);
+}
+
+.bg-tabasco-100 {
+    background-color: rgba(var(--tabasco-100), 1);
+}
+
+.bg-tabasco-200 {
+    background-color: rgba(var(--tabasco-200), 1);
+}
+
+.bg-tabasco-300 {
+    background-color: rgba(var(--tabasco-300), 1);
+}
+
+.bg-tabasco-400 {
+    background-color: rgba(var(--tabasco-400), 1);
+}
+
+.bg-tabasco-500 {
+    background-color: rgba(var(--tabasco-500), 1);
+}
+
+.bg-tabasco-600 {
+    background-color: rgba(var(--tabasco-600), 1);
+}
+
+.bg-tabasco-700 {
+    background-color: rgba(var(--tabasco-700), 1);
+}
+
+.bg-tabasco-800 {
+    background-color: rgba(var(--tabasco-800), 1);
+}
+
+.bg-tabasco-900 {
+    background-color: rgba(var(--tabasco-900), 1);
+}
+
+.bg-tabasco-950 {
+    background-color: rgba(var(--tabasco-950), 1);
+}
+
+@layer utilities {
+    /* Act as a border */
+    .card-wrapper {
+        @apply relative overflow-hidden rounded-2xl;
+    }
+
+    /* Gradient */
+    .card-wrapper::before {
+        background-color: rgb(236, 148, 24);
+        height: 100%;
+        width: 200px;
+        animation: spin-slow 10s linear infinite;
+
+        @apply absolute right-[18%] -top-[100%] h-[300%]  content-[''];
+    }
+
+    /* Body */
+    .card-content {
+        @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl;
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 0 0% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --card: 0 0% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 0 0% 9%;
+
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+        --ring: 0 0% 83.1%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+}
+
+.montserrat-normal {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 800 */
+
+.sora > {
+    font-family: "Sora", sans-serif !important;
+    font-optical-sizing: auto;
+}
