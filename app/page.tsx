@@ -17,9 +17,10 @@ export default function Home() {
             <main
                 className={`
                 flex min-h-screen w-full flex-col items-center justify-center
+                max-w-[416px] mx-auto
             `}
             >
-                <div
+                {/* <div
                     className={`
                         w-full card-shadow h-screen 
                         overflow-hidden flex flex-col justify-center items-center relative 
@@ -51,13 +52,14 @@ export default function Home() {
                             opacity-25 
                         `}
                     ></div>
-                </div>
+                </div> */}
                 <div
                 
                 // bg-gradient-to-br from-sky-600/60 from-10% to-stone-200 to-90%
                     className={`
-                    absolute top-0 left-0 w-full  flex flex-col items-start justify-between
-                    min-h-screen z-30
+                     w-full  flex flex-col items-start justify-between
+                    h-screen max-h-[800px]
+                    z-30
                     pt-16
 
                     
@@ -73,7 +75,7 @@ export default function Home() {
                     >
                         <h1
                             className={`
-                            text-4xl md:text-6xl sora font-bold tracking-tighter text-color
+                            text-4xl sora font-bold tracking-tighter text-color
                         `}
                         >
                             Embarque para o seu {" "}
