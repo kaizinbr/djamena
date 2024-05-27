@@ -2,13 +2,8 @@ import Image from "next/image";
 
 export default function Feedbacks() {
     return (
-        <div className="py-24 relative">
-            {/* <div className={`
-                absolute z-0 left-16 top-10
-                -translate-y-1/2 
-                bg-sky-400 h-[500px] w-32 -rotate-[53deg] md:size-[650px] blur-[100px] mix-blend
-            `}></div> */}
-            <div className="flex flex-col items-center justify-center h-full px-4 z-10 relative">
+        <div className="py-24 relative col-span-full flex justify-center items-center">
+            <div className="flex flex-col items-center justify-center h-full px-4 z-10 relative lg:max-w-screen-lg">
                 <h1 className="text-4xl text-center font-bold mb-8">
                     Quem viajou conosco disse:
                 </h1>

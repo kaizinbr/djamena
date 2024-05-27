@@ -1,0 +1,60 @@
+import { Instagram, Mail } from 'lucide-react';
+import { SiWhatsapp } from "react-icons/si";
+import Link from 'next/link';
+
+export default function Footer() {
+    return (
+        <footer className="bg-blue-500 text-white text-center py-12 relative col-span-full flex justify-center items-center">
+            <div
+                className={`
+                h-full z-10 px-4 relative
+                lg:max-w-screen-lg
+            `}
+            >
+                <h1 className="text-4xl font-bold mb-8">
+                    Djamena Agency
+                </h1>
+
+                <div className="flex flex-col gap-4 justify-center items-center mb-8">
+                    <div className="flex flex-row">
+                        <Instagram size={24} />
+                        <Link
+                            href="https://www.instLinkgram.com/djamena_viagens/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="ml-2"
+                        >
+                            @djamena_viagens
+                        </Link>
+                    </div>
+                    <div className="flex flex-row">
+                        <Mail size={24} />
+                        <a
+                            href="mailto:djamenaviagens24@gmail.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="ml-2"
+                        >
+                            djamenaviagens24@gmail.com
+                        </a>
+                    </div>
+                    <div className="flex flex-row">
+                        <SiWhatsapp className='size-6' />
+                        <Link
+                            href="https://api.whatsapp.com/send?phone=5585987688781"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="ml-2"
+                        >
+                            (85) 98768-8781
+                        </Link>
+                    </div>
+                </div>
+
+                <p className="text-base mb-8">
+                    © 2024 Djamena Agency. Todos os direitos reservados.
+                </p>
+            </div>
+        </footer>
+    );
+};

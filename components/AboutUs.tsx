@@ -2,22 +2,21 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-        <div className="py-24">
-            {/* <div className={`
-                absolute z-0 left-16
-                -translate-y-1/2 
-                bg-amber-300 h-[500px] w-32 rotate-45 md:size-[650px] blur-[100px] mix-blend
-            `}></div> */}
-            <div className="flex flex-col items-center justify-center h-full px-4 relative z-10">
-                <h1 className="text-4xl font-bold mb-4">Quem Somos</h1>
-                <p className="text-base text-center mb-8 montserrat-normal">
+        <div className="py-24 col-span-full flex justify-center items-center">
+            <div className={`
+                h-full z-10 px-4 relative
+                grid grid-cols-1 md:grid-cols-2 gap-x-4 md:gap-x-8  
+                lg:max-w-screen-lg
+            `}>
+                <h1 className="text-4xl text-center font-bold mb-4 order-1 md:col-span-1 md:col-start-2">Quem Somos</h1>
+                <p className="text-base text-center mb-8 montserrat-normal order-2 md:col-span-1 md:col-start-2">
                     Somos uma agência de viagens especializada em proporcionar
                     experiências incríveis. Com uma equipe apaixonada por
                     viagens, estamos prontos para tornar sua viagem
                     inesquecível.
                 </p>
                 {/* <Image src="/images/about-us.jpg" alt="Sobre Nós" className="w-96 rounded-lg shadow-lg mb-8" width={100} /> */}
-                <p className="text-base text-center mb-8 montserrat-normal">
+                <p className="text-base text-center mb-8 montserrat-normal order-3 md:col-span-1 md:col-start-2">
                     Com anos de experiência no mercado de viagens, a Djamena se
                     dedica a transformar suas férias em momentos inesquecíveis.
                     Oferecemos um atendimento personalizado e suporte completo
@@ -25,14 +24,19 @@ export default function AboutUs() {
                     check-in, para que você possa relaxar e aproveitar cada
                     momento!
                 </p>
-
-                <Image
-                    src="/pexels-fauxels-3184422.jpg"
-                    alt="Sobre Nós"
-                    className="w-96 rounded-lg shadow-lg mb-8"
-                    width={400}
-                    height={400}
-                />
+                <picture className={`
+                    w-full
+                    order-4 md:order-last md:row-start-1 md:col-start-1 md:row-span-3 m-auto
+                    flex justify-start items-center md:h-full
+                `}>
+                    <Image
+                        src="/pexels-fauxels-3184422.jpg"
+                        alt="Sobre Nós"
+                        className="w-full rounded-lg shadow-lg"
+                        width={400}
+                        height={400}
+                    />
+                </picture>
             </div>
         </div>
     );
