@@ -12,17 +12,20 @@ function Dobra1() {
             `}></div> */}
             <div className="flex flex-col items-start justify-start h-full pt-24 z-10 px-4 relative">
                 <h1 className="text-4xl font-bold mb-8">
-                    Quem viaja sozinho gasta cerca de{" "}
+                    Por que Escolher a{" "}
                     <span className="bg-[#39B5FF] px-1 rounded-md text-stone-100">
-                        270%
-                    </span>{" "}
-                    a mais.
+                        Djamena
+                    </span>
+                    ?
                 </h1>
 
                 <p className="text-base text-start mb-4 montserrat-normal">
-                    Algumas compainhas aéreas cobram taxas adicionais para quem
-                    viaja sozinho. Com a gente, você não paga nada a mais por
-                    isso.
+                    Na Djamena, nós entendemos que cada viagem é única e merece
+                    ser inesquecível. É por isso que nos dedicamos a oferecer
+                    uma experiência diferenciada, desde o primeiro contato até o
+                    seu retorno para casa. Aqui estão alguns dos motivos pelos
+                    quais nossos clientes nos escolhem e confiam em nossos
+                    serviços:
                 </p>
                 {/* <h1 className="text-4xl font-bold mb-4">Curta mais gastando menos conosco!</h1> */}
                 <Image
@@ -41,7 +44,7 @@ function Dobra1() {
 
 function Dobra3() {
     return (
-        <div className={`py-16 w-full bg-[#1C3A60]`}>
+        <div className={`py-20 w-full bg-[#1C3A60]`}>
             <div
                 className={`
                     flex flex-col gap-4 items-start justify-start h-full px-4 relative z-10
@@ -49,61 +52,29 @@ function Dobra3() {
                 `}
             >
                 <Image
-                    src="/pexels-borja-lopez-10590781.jpg"
+                    src="/pexels-cottonbro-3206081.jpg"
                     alt="Sobre Nós"
                     className="w-96  rounded-lg shadow-lg"
                     width={400}
                     height={400}
                 />
                 <h1 className={`text-4xl font-bold mb-3`}>
-                    Assistência até o check-out
+                    Assistência completa
                 </h1>
 
                 <p className="text-base text-start montserrat-normal">
-                    Nossa equipe oferece toda a assistência que você precisar,
-                    desde o momento que você entra em contato conosco até o
-                    momento do check-out.
+                    Viajar pode ser uma experiência desafiadora, mas com a
+                    Djamena, você nunca estará sozinho. Nossa equipe
+                    especializada está disponível para fornecer suporte completo
+                    em todas as etapas da sua jornada.
                 </p>
 
-                {/* <div
-                    className={`
-                    px-8 py-4 rounded-xl
-                    bg-slate-100
-                    w-full flex flex-col items-center justify-center
-                `}
-                >
-                    <BadgePercent className="size-16 mb-3" />
-                    <h2 className={`text-2xl text-center font-bold`}>
-                        As menores taxas do mercado
-                    </h2>
-                    <span></span>
-                </div>
-                <div
-                    className={`
-                    px-8 py-4 rounded-xl
-                    bg-slate-100
-                    w-full flex flex-col items-center justify-center
-                `}
-                >
-                    <Hotel className="size-16 mb-3" />
-                    <h2 className={`text-2xl text-center font-bold`}>
-                        Assistência do contato ao check-out
-                    </h2>
-                    <span></span>
-                </div>
-                <div
-                    className={`
-                    px-8 py-4 rounded-xl
-                    bg-slate-100
-                    w-full flex flex-col items-center justify-center
-                `}
-                >
-                    <BadgePercent className="size-16 mb-3" />
-                    <h2 className={`text-2xl text-center font-bold`}>
-                        As menores taxas do mercado
-                    </h2>
-                    <span></span>
-                </div> */}
+                <p className="text-base text-start montserrat-normal">
+                    Desde o planejamento inicial até o check-out, estamos aqui
+                    para garantir que tudo ocorra sem problemas. Se surgir
+                    qualquer imprevisto, você pode contar conosco para ajudar a
+                    resolver rapidamente.
+                </p>
             </div>
         </div>
     );
@@ -112,11 +83,6 @@ function Dobra3() {
 function Dobra2() {
     return (
         <div className="py-24 relative">
-            {/* <div className={`
-                absolute z-0 -left-32
-                -translate-y-1/2 rounded-full
-                bg-sky-600/60 h-[500px] w-48 -rotate-45 md:size-[650px] blur-[100px] mix-blend
-            `}></div> */}
             <div className="flex flex-col items-start justify-start h-full  z-10 px-4 relative">
                 <Image
                     src="/pexels-julieaagaard-20969831.jpg"
@@ -127,13 +93,15 @@ function Dobra2() {
                 />
 
                 <h1 className="text-4xl font-bold mb-8">
-                    Conheça destinos paradisíacos e aproveite cada momento!
+                    Conheça destinos paradisíacos!
                 </h1>
 
                 <p className="text-base text-start mb-4 montserrat-normal">
-                    Algumas compainhas aéreas cobram taxas adicionais para quem
-                    viaja sozinho. Com a gente, você não paga nada a mais por
-                    isso.
+                    Na Djamena, levamos você a descobrir os destinos mais
+                    deslumbrantes e paradisíacos do mundo. Se você sempre sonhou
+                    em visitar praias de areias brancas, ilhas exóticas e
+                    paisagens de tirar o fôlego, nós temos o pacote ideal para
+                    você.
                 </p>
                 {/* <h1 className="text-4xl font-bold mb-4">Curta mais gastando menos conosco!</h1> */}
                 {/* <Btn /> */}
@@ -146,8 +114,18 @@ function Dobra4() {
     return (
         <div className="py-24 relative">
             <div className="flex flex-col items-start justify-start h-full z-10 px-4 relative">
+                <Image
+                    src="/lastimg.jpg"
+                    alt="aaa"
+                    width={500}
+                    height={500}
+                    className={`
+                    w-96  rounded-lg shadow-lg mb-8
+                `}
+                />
                 <h1 className={`text-4xl font-bold mb-8`}>
-                    Hora de decidir seu<br />
+                    Hora de decidir seu
+                    <br />
                     <span
                         className={`bg-[#39B5FF] px-1 rounded-md text-stone-100`}
                     >
@@ -156,20 +134,13 @@ function Dobra4() {
                     !
                 </h1>
 
-                {/* <p className="text-sm text-start mb-4 montserrat-normal">
-                    Algumas compainhas aéreas cobram taxas adicionais para quem
-                    viaja sozinho. Com a gente, você não paga nada a mais por
-                    isso.
-                </p> */}
-            <Image
-                src="/bg.jpg"
-                alt="aaa"
-                width={500}
-                height={500}
-                className={`
-                    w-96  rounded-lg shadow-lg mb-8
-                `}
-            />
+                <p className="text-base text-start mb-4 montserrat-normal">
+                    Escolher a Djamena é escolher um parceiro dedicado a
+                    transformar sua viagem dos sonhos em realidade. Deixe-nos
+                    cuidar de todos os detalhes para que você possa se
+                    concentrar no que realmente importa: criar memórias
+                    inesquecíveis e aproveitar cada momento da sua viagem!
+                </p>
                 <Btn />
                 {/* <div className="mt-6 w-full h-80 rounded bg-stone-800 border border-amber-700"></div> */}
             </div>

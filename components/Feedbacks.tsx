@@ -1,8 +1,6 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Feedbacks() {
-
-
     return (
         <div className="py-24 relative">
             {/* <div className={`
@@ -11,16 +9,31 @@ export default function Feedbacks() {
                 bg-sky-400 h-[500px] w-32 -rotate-[53deg] md:size-[650px] blur-[100px] mix-blend
             `}></div> */}
             <div className="flex flex-col items-center justify-center h-full px-4 z-10 relative">
-                <h1 className="text-4xl text-center font-bold mb-8">Quem viajou conosco disse:</h1>
-                <div className={`
+                <h1 className="text-4xl text-center font-bold mb-8">
+                    Quem viajou conosco disse:
+                </h1>
+                <div
+                    className={`
                     h-[400px] w-full bg-[#39B5FF] rounded-2xl flex
-                `}>
-                    <div className="m-auto">
-                        <p className="text-2xl text-center text-neutral-100 font-bold mb-4">&quot;A viagem foi incrível, a equipe é muito atenciosa e prestativa. Recomendo a todos!&quot;</p>
-                        <p className="text-lg text-center text-neutral-100">- João da Silva</p>
+                `}
+                >
+                    <div className="m-auto p-4">
+                        <p className="text-sm text-center text-neutral-100 font-medium mb-4">
+                            &quot;A agência Djamena é a melhor que de todas que
+                            eu já conheci. Os profissionais são atenciosos,
+                            eficientes e ágeis no atendimento. Eu nunca tive
+                            problemas com passagens e seguros de viagem nacional
+                            e internacionais que comprei nesta agência. Eu super
+                            indico as pessoas que comprar as passagens, seguros
+                            e realizar reservas de
+                            hospedagem nesta agência&quot;
+                        </p>
+                        <p className="text-base text-center text-neutral-100">
+                            - Mike Amisi
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

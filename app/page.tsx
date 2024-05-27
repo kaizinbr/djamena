@@ -20,52 +20,17 @@ export default function Home() {
                 max-w-[416px] mx-auto
             `}
             >
-                {/* <div
-                    className={`
-                        w-full card-shadow h-screen 
-                        overflow-hidden flex flex-col justify-center items-center relative 
-                        text-color card-background-color
-                        
-                    `}
-                >
-                    <div
-                        className={`
-                            absolute top-1/3 -left-32 
-                            -translate-y-1/2 rounded-full 
-                            bg-amber-600 size-[500px] md:size-[650px] blur-[100px] mix-blend
-                            opacity-25 
-                        `}
-                    ></div>
-                    <div
-                        className={`
-                            absolute -top-56 left-1/2 lg:left-1/3
-                            -translate-x-1/2 rounded-full 
-                            bg-amber-500 size-[400px] md:size-[500px] blur-[100px] mix-blend
-                            hidden md:block
-                        `}
-                    ></div>
-                    <div
-                        className={`
-                            absolute -top-56 left-1/2 lg:left-2/3
-                            -translate-x-1/2 rounded-full 
-                            bg-amber-700 size-[650px] md:size-[700px] blur-[100px] mix-blend
-                            opacity-25 
-                        `}
-                    ></div>
-                </div> */}
                 <div
-                
-                // bg-gradient-to-br from-sky-600/60 from-10% to-stone-200 to-90%
                     className={`
-                     w-full  flex flex-col items-start justify-between
-                    h-screen max-h-[800px]
-                    z-30
-                    pt-16
+                        w-full  flex flex-col items-start justify-between
+                        h-screen max-h-[800px]
+                        z-30
+                        pt-16
 
-                    
-                    bg-[url('/bg4.jpg')] bg-cover
-                    bg-no-repeat bg-scroll bg-top
-                `}
+                        
+                        bg-[url('/bg4.jpg')] bg-cover
+                        bg-no-repeat bg-scroll bg-top
+                    `}
                 >
                     <div
                         className={`
