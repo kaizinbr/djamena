@@ -19,7 +19,7 @@ export default function Footer() {
                     <div className="flex flex-row">
                         <Instagram size={24} />
                         <Link
-                            href="https://www.instLinkgram.com/djamena_viagens/"
+                            href="https://www.instagram.com/djamena_viagens/"
                             target="_blank"
                             rel="noreferrer"
                             className="ml-2"
@@ -51,7 +51,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <p className="text-base mb-8">
+                <p className="text-sm mb-8">
                     © 2024 Djamena Agency. Todos os direitos reservados.
                 </p>
             </div>
