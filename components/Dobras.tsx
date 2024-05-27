@@ -23,11 +23,8 @@ function Dobra1() {
                     Na Djamena, nós entendemos que cada viagem é única e merece
                     ser inesquecível. É por isso que nos dedicamos a oferecer
                     uma experiência diferenciada, desde o primeiro contato até o
-                    seu retorno para casa. Aqui estão alguns dos motivos pelos
-                    quais nossos clientes nos escolhem e confiam em nossos
-                    serviços:
+                    seu retorno para casa.
                 </p>
-                {/* <h1 className="text-4xl font-bold mb-4">Curta mais gastando menos conosco!</h1> */}
                 <Image
                     src="/img1.jpg"
                     alt="Sobre Nós"
