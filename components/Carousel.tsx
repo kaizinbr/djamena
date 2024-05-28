@@ -78,7 +78,7 @@ export default function Carousel() {
                             <p className="text-sm md:text-lg text-center text-neutral-100 font-medium mb-4">
                                 &quot;Viajar é bom mas viajar sem estresse é
                                 melhor. E para nossas viagens de turismo de
-                                trabalho e tais , é sempre bom consultar os
+                                trabalho e tais, é sempre bom consultar os
                                 melhores profissionais. Desta forma, conheço a
                                 djamena viagens, que de forma particular e
                                 profissional me auxiliou na planificação e
@@ -116,14 +116,16 @@ export default function Carousel() {
                                 Alegre até João pessoa ( ir e volta).
                                 <br />
                                 <br />
-                                Quero deixar a minha satisfação que vai desde os
-                                primeiros contatos pela compra da passagem (um
-                                serviço de atendimento ao cliente impecável); Os
-                                preços da passagem que desafio toda
-                                concorrência; Uma agência confiável e
-                                responsável; Livre de estresse caso surge um
-                                problema, sei que poderia contar com os serviços
-                                da agência pós venda da passagem.❤
+                                <span className="font-bold">
+                                    Quero deixar a minha satisfação que vai desde os
+                                    primeiros contatos pela compra da passagem (um
+                                    serviço de atendimento ao cliente impecável); Os
+                                    preços da passagem que desafio toda
+                                    concorrência; Uma agência confiável e
+                                    responsável; Livre de estresse caso surge um
+                                    problema, sei que poderia contar com os serviços
+                                    da agência pós venda da passagem.❤
+                                </span>
                                 <br />
                                 <br />
                                 Fiz uma excelente viagem e recomendo fortemente

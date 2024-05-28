@@ -1,19 +1,25 @@
 import { Instagram, Mail } from 'lucide-react';
 import { SiWhatsapp } from "react-icons/si";
 import Link from 'next/link';
+import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <footer className="bg-blue-500 text-white text-center py-12 relative col-span-full flex justify-center items-center">
+        <footer className="bg-[#C5DDFF] text-[#001B41] text-center py-12 relative col-span-full flex justify-center items-center">
             <div
                 className={`
                 h-full z-10 px-4 relative
                 lg:max-w-screen-lg
+                flex flex-col gap-8
+                justify-center items-center
             `}
             >
-                <h1 className="text-4xl font-bold mb-8">
-                    Djamena Agency
-                </h1>
+                <Image
+                    src="/logo-djamena.jpg"
+                    alt='Logo da Djamena Agency'
+                    width={250}
+                    height={250}
+                />
 
                 <div className="flex flex-col gap-4 justify-center items-center mb-8">
                     <div className="flex flex-row">
