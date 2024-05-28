@@ -199,6 +199,7 @@ function Dobra4() {
                         memórias inesquecíveis e aproveitar cada momento da sua
                         viagem!
                     </p>
+                    <Btn className="mb-4" /> 
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Btn() {
+export default function Btn({ className } : { className?: string }) {
     return (
         <motion.a
             className={`
@@ -10,6 +10,7 @@ export default function Btn() {
                 rounded-lg p-[3px]
                 w-full text-neutral-100
                 flex items-center justify-center
+                ${className}
             `}
             animate={{ scale: 1 }}
             whileTap={{ scale: 0.9 }}
