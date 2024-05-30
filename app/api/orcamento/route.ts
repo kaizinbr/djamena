@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
         console.log("Data received:", data);
 
         // Send the data as JSON using axios
-        const response = await axios.post("https://agencia.iddas.com.br/orcamento/solicitacao/nova/NzBac0ZlY1p0WG5wWkJHM2xINDRsQT09", data);
+        const response = await axios.post("https://agencia.iddas.com.br/orcamento/solicitacao/nova/ZTJrSGlaZzZEcTFSVjQ1d2lDK0dOQT09", data);
         console.log("Response received:", response.data);
 
         // Return the response data as JSON
