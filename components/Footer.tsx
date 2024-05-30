@@ -21,7 +21,7 @@ export default function Footer() {
                     height={250}
                 />
 
-                <div className="flex flex-col gap-4 justify-center items-center mb-8">
+                <div className="flex flex-col gap-4 justify-center items-center mb-4">
                     <div className="flex flex-row">
                         <Instagram size={24} />
                         <Link
@@ -57,6 +57,9 @@ export default function Footer() {
                     </div>
                 </div>
 
+                <p className="text-sm mb-4">
+                    CNPJ: 52.984.076/0001-00
+                </p>
                 <p className="text-sm mb-8">
                     © 2024 Djamena Agency. Todos os direitos reservados.
                 </p>

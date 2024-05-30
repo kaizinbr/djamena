@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {  Sora, Lato } from "next/font/google";
+import { Sora, Lato } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 
@@ -18,13 +18,22 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={sora.className + `
+            <NextUIProvider locale="pt-br">
+                <body
+                    className={
+                        sora.className +
+                        `
                 min-h-screen
                 bg-slate-100
                 flex
                 justify-center
                 items-center
-            `} >{children}</body>
+            `
+                    }
+                >
+                    {children}
+                </body>
+            </NextUIProvider>
         </html>
     );
 }

@@ -51,12 +51,12 @@
 
 body {
     /* color: rgb(var(--foreground-rgb)); */
-    background: linear-gradient(
+    /* background: linear-gradient(
             to bottom,
             transparent,
             rgb(var(--background-end-rgb))
         )
-        rgb(var(--background-start-rgb));
+        rgb(var(--background-start-rgb)); */
     overflow-x: hidden;
 
     font-family: "Lato", sans-serif;
@@ -324,4 +324,12 @@ p{
 
 .swiper-pagination-bullet-active {
     background: rgb(255 255 255 / 1) !important;
+}
+
+.dataPicker span {
+    font-weight: bold !important;
+}
+
+.check::after {
+    background-color: #39B5FF !important;
 }
