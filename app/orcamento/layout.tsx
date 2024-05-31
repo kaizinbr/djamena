@@ -4,8 +4,8 @@ export default function Layout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="flex justify-center w-full items-center py-8 bg-[#C5DDFF]">
+        <main className="flex justify-center w-screen items-center py-8 bg-[#C5DDFF]">
             {children}
-        </div>
+        </main>
     );
 }

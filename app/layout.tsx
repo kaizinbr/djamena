@@ -9,6 +9,7 @@ const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 export const metadata: Metadata = {
     title: "Djamena Agency - Agência de Viagens",
     description: "Realize seu sonho de viajar agora mesmo!",
+
 };
 
 export default function RootLayout({
@@ -17,8 +18,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <NextUIProvider locale="pt-br">
+        <html lang="pt-br">
                 <body
                     className={
                         sora.className +
@@ -31,9 +31,10 @@ export default function RootLayout({
             `
                     }
                 >
+            <NextUIProvider locale="pt-br">
                     {children}
-                </body>
             </NextUIProvider>
+                </body>
         </html>
     );
 }

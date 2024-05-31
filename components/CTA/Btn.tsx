@@ -14,7 +14,7 @@ export default function Btn({ className } : { className?: string }) {
             `}
             animate={{ scale: 1 }}
             whileTap={{ scale: 0.9 }}
-            href="https://agencia.iddas.com.br/orcamento/solicitacao/nova/ZTJrSGlaZzZEcTFSVjQ1d2lDK0dOQT09"
+            href="/orcamento"
         >
             <p className="font-bold text-lg px-4 py-3 rounded-md">Reserve agora</p>
         </motion.a>

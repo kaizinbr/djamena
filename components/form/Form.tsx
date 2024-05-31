@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Input } from "@nextui-org/react";
 import { DatePicker } from "@nextui-org/react";
+
 import {
     Modal,
     ModalContent,
@@ -10,35 +11,54 @@ import {
     ModalFooter,
     Button,
     useDisclosure,
+    Spinner,
 } from "@nextui-org/react";
 import {
     DateValue,
     parseDate,
     getLocalTimeZone,
+    today,
 } from "@internationalized/date";
 import { Switch } from "@nextui-org/react";
 import { CheckboxGroup, Checkbox } from "@nextui-org/checkbox";
 import { Textarea } from "@nextui-org/react";
-import { Plus, Minus, User, CircleAlert } from "lucide-react";
+import {
+    Plus,
+    Minus,
+    User,
+    CircleAlert,
+    X,
+    Instagram,
+    Mail,
+} from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
+import Link from "next/link";
 
 export function Form() {
-    const [campoNome, setCampoNome] = useState("");
-    const [campoCelular, setCampoCelular] = useState("");
-    const [campoEmail, setCampoEmail] = useState("");
-    const [campoOrigem, setCampoOrigem] = useState("");
-    const [campoDestino, setCampoDestino] = useState("");
-    const [campoDataInicial, setCampoDataInicial] = useState<DateValue>();
-    const [campoDataFinal, setCampoDataFinal] = useState<DateValue>();
-    const [campoPassageiroAdulto, setCampoPassageiroAdulto] = useState(1);
-    const [campoPassageiroCrianca, setCampoPassageiroCrianca] = useState(0);
-    const [campoPassageiroBebe, setCampoPassageiroBebe] = useState(0);
-    const [campoFlexibilidade, setCampoFlexibilidade] = useState(false);
-    const [campoMalaDespachada, setCampoMalaDespachada] = useState(0);
-    const [campoServicos, setCampoServicos] = useState([] as string[]);
+    const [campoNome, setCampoNome] = useState(""); //string
+    const [campoCelular, setCampoCelular] = useState(+0); //number
+    const [celularFormValue, setCelularFormValue] = useState(""); //string
+    const [campoEmail, setCampoEmail] = useState(""); //string
+    const [campoOrigem, setCampoOrigem] = useState(""); //string
+    const [campoDestino, setCampoDestino] = useState(""); //string
+    const [campoDataInicial, setCampoDataInicial] = useState<DateValue>(); //string (date)
+    const [campoDataFinal, setCampoDataFinal] = useState<DateValue>(); //string (date)
+    const [campoPassageiroAdulto, setCampoPassageiroAdulto] = useState(1); //number => 1
+    const [campoPassageiroCrianca, setCampoPassageiroCrianca] = useState(0); //number => 0
+    const [campoPassageiroBebe, setCampoPassageiroBebe] = useState(0); //number => 0
+    const [campoFlexibilidade, setCampoFlexibilidade] = useState(false); //S or N
+    const [campoMalaDespachada, setCampoMalaDespachada] = useState(0); //number => 0
+    const [campoServicos, setCampoServicos] = useState([] as string[]); //array of strings
     const [campoCupomDesconto, setCampoCupomDesconto] = useState("");
-    const [campoObservacao, setCampoObservacao] = useState("");
+    const [campoObservacao, setCampoObservacao] = useState(""); //string
+    const [campoDataNascimento, setCampoDataNascimento] = useState<DateValue>(); //string (date)
 
     const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const [error, setError] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
+
     const [backdrop, setBackdrop] = useState("opaque");
 
     // Function to format phone number
@@ -52,7 +72,9 @@ export function Form() {
     };
 
     const cleanNumber = (phoneNumber: string) => {
-        return phoneNumber.replace(/\D/g, "");
+        const numCleaned = phoneNumber.replace(/\D/g, "");
+        let numeroComPrefixo = Number(numCleaned) + 5500000000000;
+        return numeroComPrefixo;
     };
 
     // parse date to YYYY-MM-DD
@@ -65,15 +87,17 @@ export function Form() {
 
     // UseEffect to format phone number on change
     useEffect(() => {
-        setCampoCelular(formatPhoneNumber(campoCelular));
-    }, [campoCelular]);
+        setCelularFormValue(formatPhoneNumber(celularFormValue));
+    }, [celularFormValue]);
 
     // Rest of the code...
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setLoading(true);
         try {
             const flexRes = campoFlexibilidade ? "S" : "N";
+            console.log(campoCelular);
 
             if (
                 !campoNome ||
@@ -84,36 +108,66 @@ export function Form() {
                 !campoDataInicial
             ) {
                 onOpen();
+                setLoading(false);
+
                 return;
             }
 
+            const formData = new FormData();
+            formData.append("campoNome", campoNome);
+            formData.append("campoCelular", campoCelular.toString());
+            formData.append("campoEmail", campoEmail);
+            formData.append("campoOrigem", campoOrigem);
+            formData.append("campoDestino", campoDestino);
+            formData.append(
+                "campoDataInicial",
+                parseDateToISO(campoDataInicial)
+            );
+            formData.append("campoDataFinal", parseDateToISO(campoDataFinal));
+            formData.append(
+                "campoPassageiroAdulto",
+                campoPassageiroAdulto.toString()
+            );
+            formData.append(
+                "campoPassageiroCrianca",
+                campoPassageiroCrianca.toString()
+            );
+            formData.append(
+                "campoPassageiroBebe",
+                campoPassageiroBebe.toString()
+            );
+            formData.append("campoFlexibilidade", flexRes);
+            formData.append(
+                "campoMalaDespachada",
+                campoMalaDespachada.toString()
+            );
+            campoServicos.forEach((servico, index) => {
+                formData.append(`campoServicos[]`, servico);
+            });
+            formData.append("campoCupomDesconto", campoCupomDesconto);
+            const obsString =
+                "Data de nascimento:" +
+                campoDataNascimento +
+                "\n" +
+                campoObservacao;
+            formData.append("campoObservacao", obsString);
+
             const response = await fetch("/api/orcamento", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    campoNome,
-                    campoCelular: `+55${cleanNumber(campoCelular)}`,
-                    campoEmail,
-                    campoOrigem,
-                    campoDestino,
-                    campoDataInicial: parseDateToISO(campoDataInicial),
-                    campoDataFinal: parseDateToISO(campoDataFinal),
-                    campoPassageiroAdulto,
-                    campoPassageiroCrianca,
-                    campoPassageiroBebe,
-                    campoFlexibilidade: flexRes,
-                    campoMalaDespachada,
-                    campoServicos,
-                    campoCupomDesconto,
-                    campoObservacao,
-                }),
-            });
-            if (response.ok) {
+                body: formData,
+            }).then((res) => res.json());
+            console.log(response.sucesso);
+            if (response.sucesso == "S") {
                 // Handle success
+                setLoading(false);
+                setSuccess(true);
             } else {
                 // Handle error
+                setLoading(false);
+                setError(true);
+                setTimeout(() => {
+                    setError(false);
+                }, 10000);
             }
         } catch (error) {
             // Handle error
@@ -159,16 +213,20 @@ export function Form() {
                         <div className="col-span-1">
                             <Input
                                 type="tel"
+                                inputMode="numeric"
                                 label="Número de celular"
                                 placeholder="Digite seu número de celular"
                                 labelPlacement="outside"
                                 autoComplete="off"
-                                value={campoCelular}
+                                value={celularFormValue}
                                 classNames={{
                                     input: "w-full",
                                     label: "text-gray-700 text-sm font-bold mb-2",
                                 }}
-                                onValueChange={setCampoCelular}
+                                onValueChange={(value) => {
+                                    setCelularFormValue(value);
+                                    setCampoCelular(+cleanNumber(value));
+                                }}
                                 isRequired
                             />
                         </div>
@@ -186,6 +244,22 @@ export function Form() {
                                 }}
                                 onValueChange={setCampoEmail}
                                 isRequired
+                            />
+                        </div>
+                        <div className="col-span-1 dataPicker">
+                            <DatePicker
+                                className=""
+                                label="Data de nascimento"
+                                value={campoDataNascimento}
+                                labelPlacement="outside"
+                                classNames={{
+                                    input: "w-full",
+                                    label: "text-gray-700 text-sm font-bold mb-2",
+                                }}
+                                onChange={setCampoDataNascimento}
+                                maxValue={today(getLocalTimeZone())}
+                                isRequired
+                                showMonthAndYearPickers
                             />
                         </div>
                     </section>
@@ -247,6 +321,7 @@ export function Form() {
                                     label: "text-gray-700 text-sm font-bold mb-2",
                                 }}
                                 onChange={setCampoDataInicial}
+                                minValue={today(getLocalTimeZone())}
                                 isRequired
                             />
                         </div>
@@ -262,6 +337,7 @@ export function Form() {
                                         "text-gray-700 text-sm font-bold mb-2",
                                 }}
                                 onChange={setCampoDataFinal}
+                                minValue={today(getLocalTimeZone())}
                             />
                         </div>
 
@@ -512,11 +588,10 @@ export function Form() {
                             onValueChange={setCampoObservacao}
                         />
                     </div>
-                    {/* Add the remaining form fields based on the provided instructions */}
 
                     <div className="flex justify-end">
                         <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-150 ease-in-out focus:outline-none focus:shadow-outline"
                             type="submit"
                         >
                             Enviar
@@ -524,7 +599,14 @@ export function Form() {
                     </div>
                 </form>
             </div>
-            <Modal isOpen={isOpen} onClose={onClose} placement="center">
+            <Modal
+                isOpen={isOpen}
+                onClose={onClose}
+                placement="center"
+                classNames={{
+                    wrapper: "px-4",
+                }}
+            >
                 <ModalContent>
                     {(onClose) => (
                         <>
@@ -541,6 +623,7 @@ export function Form() {
                                 <Button
                                     color="danger"
                                     variant="light"
+                                    className="bg-neutral-200 hover:bg-neutral-400"
                                     onPress={onClose}
                                 >
                                     Ok
@@ -550,6 +633,141 @@ export function Form() {
                     )}
                 </ModalContent>
             </Modal>
+            {loading && (
+                <div className="-1">
+                    <div
+                        className={`
+                    z-50 bg-overlay/50 backdrop-opacity-disabled w-screen h-screen fixed inset-0
+                `}
+                    >
+                        <div className="flex justify-center items-center w-full h-full">
+                            <Spinner
+                                color="primary"
+                                size="md"
+                                classNames={{
+                                    circle1: "border-b-[#39B5FF]",
+                                    circle2: "border-b-[#39B5FF]",
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            <div className="-1">
+                <div
+                    className={`
+                            fixed z-50 left-4 right-4 max-w-[400px] mx-auto
+                            p-6 rounded-xl bg-neutral-50 border border-red-500/50 shadow-sm
+                            transition-all duration-300 ease-in-out
+                            ${error ? "top-4 " : "-top-full"}
+                            flex flex-col
+                        `}
+                >
+                    <p className="text-center mb-4">
+                        Ocorreu um erro, verifique os dados e tente novamente.
+                        <br />
+                        Se o erro persistir, nos contate em algum dos canais abaixo.
+                    </p>
+                    
+                    <div className="flex flex-col gap-4 justify-center items-center mb-4">
+                        <div className="flex flex-row">
+                            <Instagram size={24} />
+                            <Link
+                                href="https://www.instagram.com/djamena_viagens/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="ml-2"
+                            >
+                                @djamena_viagens
+                            </Link>
+                        </div>
+                        <div className="flex flex-row">
+                            <Mail size={24} />
+                            <a
+                                href="mailto:djamenaviagens24@gmail.com"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="ml-2"
+                            >
+                                djamenaviagens24@gmail.com
+                            </a>
+                        </div>
+                        <div className="flex flex-row">
+                            <SiWhatsapp className="size-6" />
+                            <Link
+                                href="https://api.whatsapp.com/send?phone=5585987688781"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="ml-2"
+                            >
+                                (85) 98768-8781
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="-1">
+                <div
+                    className={`
+                            fixed z-50 left-4 right-4 max-w-[400px] mx-auto
+                            p-2 rounded-xl bg-neutral-50 border border-green-500/50 shadow-sm
+                            transition-all duration-300 ease-in-out
+                            ${success ? "top-4" : "-top-full"}
+                            flex flex-col
+                        `}
+                >
+                    <div className="flex justify-end">
+                        <button
+                            onClick={() => {
+                                setSuccess(false);
+                            }}
+                            className="hover:bg-red-500 rounded-full p-1"
+                        >
+                            <X />
+                        </button>
+                    </div>
+                    <p className="text-center mb-4">
+                        Sua solicitação foi feita com sucesso! Entraremos em
+                        contato em breve.
+                    </p>
+                    <div className="flex flex-col gap-4 justify-center items-center mb-4">
+                        <div className="flex flex-row">
+                            <Instagram size={24} />
+                            <Link
+                                href="https://www.instagram.com/djamena_viagens/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="ml-2"
+                            >
+                                @djamena_viagens
+                            </Link>
+                        </div>
+                        <div className="flex flex-row">
+                            <Mail size={24} />
+                            <a
+                                href="mailto:djamenaviagens24@gmail.com"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="ml-2"
+                            >
+                                djamenaviagens24@gmail.com
+                            </a>
+                        </div>
+                        <div className="flex flex-row">
+                            <SiWhatsapp className="size-6" />
+                            <Link
+                                href="https://api.whatsapp.com/send?phone=5585987688781"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="ml-2"
+                            >
+                                (85) 98768-8781
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

@@ -1,0 +1,21 @@
+POST https://agencia.iddas.com.br/orcamento/solicitacao/nova/NzBac0ZlY1p0WG5wWkJHM2xINDRsQT09
+Content-Type: application/json
+
+{
+    "campoNome": "testeeeee",
+    "campoCelular": +5583991667092,
+    "campoEmail": "teste@gmail.com",
+    "campoOrigem": "teste2",
+    "campoDestino": "teste1",
+    "campoDataInicial": 2024-06-06,
+    "campoDataFinal": "",
+    "campoPassageiroAdulto": 2,
+    "campoPassageiroCrianca": 0,
+    "campoPassageiroBebe": 0,
+    "campoMalaDespachada": 0,
+    "campoServicos": [
+        "H"
+    ],
+    "campoCupomDesconto": "",
+    "campoObservacao": ""
+}
