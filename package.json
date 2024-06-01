@@ -1,5 +1,5 @@
 {
-  "name": "viagens",
+  "name": "djamena_agency",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,6 @@
   "dependencies": {
     "@nextui-org/react": "^2.4.0",
     "@radix-ui/react-slot": "^1.0.2",
-    "amadeus": "^10.0.0",
-    "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.0.2",

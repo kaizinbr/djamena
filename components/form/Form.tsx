@@ -6,7 +6,6 @@ import { DatePicker } from "@nextui-org/react";
 import {
     Modal,
     ModalContent,
-    ModalHeader,
     ModalBody,
     ModalFooter,
     Button,
@@ -22,15 +21,7 @@ import {
 import { Switch } from "@nextui-org/react";
 import { CheckboxGroup, Checkbox } from "@nextui-org/checkbox";
 import { Textarea } from "@nextui-org/react";
-import {
-    Plus,
-    Minus,
-    User,
-    CircleAlert,
-    X,
-    Instagram,
-    Mail,
-} from "lucide-react";
+import { Plus, Minus, CircleAlert, X, Instagram, Mail } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import Link from "next/link";
 
@@ -55,13 +46,12 @@ export function Form() {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
+    // states para controlar as mensagens de resposta
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const [backdrop, setBackdrop] = useState("opaque");
-
-    // Function to format phone number
+    // formata o numero de celular para o formato (XX) XXXXX-XXXX
     const formatPhoneNumber = (phoneNumber: string) => {
         const cleaned = phoneNumber.replace(/\D/g, "");
         const match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
@@ -71,13 +61,14 @@ export function Form() {
         return phoneNumber;
     };
 
+    // limpa o número de celular e adiciona o prefixo 55
     const cleanNumber = (phoneNumber: string) => {
         const numCleaned = phoneNumber.replace(/\D/g, "");
         let numeroComPrefixo = Number(numCleaned) + 5500000000000;
         return numeroComPrefixo;
     };
 
-    // parse date to YYYY-MM-DD
+    // converte data para o formato YYYY-MM-DD
     const parseDateToISO = (date: DateValue | any) => {
         if (date) {
             return parseDate(date.toString()).toString().split("T")[0];
@@ -90,15 +81,11 @@ export function Form() {
         setCelularFormValue(formatPhoneNumber(celularFormValue));
     }, [celularFormValue]);
 
-    // Rest of the code...
-
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setLoading(true);
         try {
             const flexRes = campoFlexibilidade ? "S" : "N";
-            console.log(campoCelular);
-
             if (
                 !campoNome ||
                 !campoCelular ||
@@ -109,7 +96,6 @@ export function Form() {
             ) {
                 onOpen();
                 setLoading(false);
-
                 return;
             }
 
@@ -181,15 +167,16 @@ export function Form() {
                     Solicitação de Orçamento
                 </h2>
                 <form onSubmit={handleSubmit}>
+                    {/* parte de dados pessoais */}
                     <section
                         className={`
-                    grid
-                    grid-cols-1
-                    gap-4
-                    md:grid-cols-2 md:gap-x-8 md:px-6
-                    p-4 rounded-2xl bg-neutral-50
-                
-                `}
+                            grid
+                            grid-cols-1
+                            gap-4
+                            md:grid-cols-2 md:gap-x-8 md:px-6
+                            p-4 rounded-2xl bg-neutral-50
+                        
+                        `}
                     >
                         <h3 className="col-span-full font-bold text-lg">
                             Conte um pouco sobre você
@@ -215,7 +202,7 @@ export function Form() {
                                 type="tel"
                                 inputMode="numeric"
                                 label="Número de celular"
-                                placeholder="Digite seu número de celular"
+                                placeholder="(XX) XXXXX-XXXX"
                                 labelPlacement="outside"
                                 autoComplete="off"
                                 value={celularFormValue}
@@ -234,7 +221,7 @@ export function Form() {
                             <Input
                                 type="email"
                                 label="Email"
-                                placeholder="you@example.com"
+                                placeholder="seunome@email.com"
                                 labelPlacement="outside"
                                 autoComplete="off"
                                 value={campoEmail}
@@ -246,6 +233,7 @@ export function Form() {
                                 isRequired
                             />
                         </div>
+                        {/* o iddas nao mantem um campo para isso, então é adicionada as observações */}
                         <div className="col-span-1 dataPicker">
                             <DatePicker
                                 className=""
@@ -258,22 +246,21 @@ export function Form() {
                                 }}
                                 onChange={setCampoDataNascimento}
                                 maxValue={today(getLocalTimeZone())}
-                                isRequired
                                 showMonthAndYearPickers
                             />
                         </div>
                     </section>
 
+                    {/* seção de dados sobre a viagem */}
                     <section
                         className={`
-                    grid
-                    grid-cols-1
-                    gap-4
-                    md:grid-cols-2 md:gap-x-8 md:px-6
-                    mt-4
-                    
-                    p-4 rounded-2xl bg-neutral-50
-                `}
+                            grid
+                            grid-cols-1
+                            gap-4
+                            md:grid-cols-2 md:gap-x-8 md:px-6
+                            mt-4
+                            p-4 rounded-2xl bg-neutral-50
+                        `}
                     >
                         <h3 className="col-span-full font-bold text-lg">
                             Agora um pouco sobre sua viagem
@@ -368,11 +355,9 @@ export function Form() {
                                     </span>
                                     <button
                                         onClick={() => {
-                                            if (campoPassageiroAdulto < 5) {
-                                                setCampoPassageiroAdulto(
-                                                    campoPassageiroAdulto + 1
-                                                );
-                                            }
+                                            setCampoPassageiroAdulto(
+                                                campoPassageiroAdulto + 1
+                                            );
                                         }}
                                         type="button"
                                         className="px-2 size-10 rounded-md bg-[#f4f4f5] hover:bg-[#e4e4e7] transition-all duration-150 ease-in-out"
@@ -396,11 +381,9 @@ export function Form() {
                                 <div className="flex items-center justify-end">
                                     <button
                                         onClick={() => {
-                                            if (campoPassageiroCrianca > 1) {
-                                                setCampoPassageiroCrianca(
-                                                    campoPassageiroCrianca - 1
-                                                );
-                                            }
+                                            setCampoPassageiroCrianca(
+                                                campoPassageiroCrianca - 1
+                                            );
                                         }}
                                         type="button"
                                         className="px-2 size-10 rounded-md bg-[#f4f4f5] hover:bg-[#e4e4e7] transition-all duration-150 ease-in-out"
@@ -412,11 +395,9 @@ export function Form() {
                                     </span>
                                     <button
                                         onClick={() => {
-                                            if (campoPassageiroCrianca < 5) {
-                                                setCampoPassageiroCrianca(
-                                                    campoPassageiroCrianca + 1
-                                                );
-                                            }
+                                            setCampoPassageiroCrianca(
+                                                campoPassageiroCrianca + 1
+                                            );
                                         }}
                                         type="button"
                                         className="px-2 size-10 rounded-md bg-[#f4f4f5] hover:bg-[#e4e4e7] transition-all duration-150 ease-in-out"
@@ -437,11 +418,9 @@ export function Form() {
                                 <div className="flex items-center justify-end">
                                     <button
                                         onClick={() => {
-                                            if (campoPassageiroBebe > 1) {
-                                                setCampoPassageiroBebe(
-                                                    campoPassageiroBebe - 1
-                                                );
-                                            }
+                                            setCampoPassageiroBebe(
+                                                campoPassageiroBebe - 1
+                                            );
                                         }}
                                         type="button"
                                         className="px-2 size-10 rounded-md bg-[#f4f4f5] hover:bg-[#e4e4e7] transition-all duration-150 ease-in-out"
@@ -453,11 +432,9 @@ export function Form() {
                                     </span>
                                     <button
                                         onClick={() => {
-                                            if (campoPassageiroBebe < 5) {
-                                                setCampoPassageiroBebe(
-                                                    campoPassageiroBebe + 1
-                                                );
-                                            }
+                                            setCampoPassageiroBebe(
+                                                campoPassageiroBebe + 1
+                                            );
                                         }}
                                         type="button"
                                         className="px-2 size-10 rounded-md bg-[#f4f4f5]  hover:bg-[#e4e4e7] transition-all duration-150 ease-in-out"
@@ -477,11 +454,9 @@ export function Form() {
                                 <div className="flex items-center justify-end">
                                     <button
                                         onClick={() => {
-                                            if (campoMalaDespachada > 1) {
-                                                setCampoMalaDespachada(
-                                                    campoMalaDespachada - 1
-                                                );
-                                            }
+                                            setCampoMalaDespachada(
+                                                campoMalaDespachada - 1
+                                            );
                                         }}
                                         type="button"
                                         className="px-2 size-10 rounded-md bg-[#f4f4f5] hover:bg-[#e4e4e7] transition-all duration-150 ease-in-out"
@@ -493,11 +468,9 @@ export function Form() {
                                     </span>
                                     <button
                                         onClick={() => {
-                                            if (campoMalaDespachada < 5) {
-                                                setCampoMalaDespachada(
-                                                    campoMalaDespachada + 1
-                                                );
-                                            }
+                                            setCampoMalaDespachada(
+                                                campoMalaDespachada + 1
+                                            );
                                         }}
                                         type="button"
                                         className="px-2 size-10 rounded-md bg-[#f4f4f5]  hover:bg-[#e4e4e7] transition-all duration-150 ease-in-out"
@@ -610,9 +583,6 @@ export function Form() {
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            {/* <ModalHeader className="flex flex-col gap-1">
-                                Modal Title
-                            </ModalHeader> */}
                             <ModalBody>
                                 <div className="flex flex-col w-full justify-center items-center py-8 ">
                                     <CircleAlert className="size-16 text-red-500 mb-6" />
@@ -667,9 +637,10 @@ export function Form() {
                     <p className="text-center mb-4">
                         Ocorreu um erro, verifique os dados e tente novamente.
                         <br />
-                        Se o erro persistir, nos contate em algum dos canais abaixo.
+                        Se o erro persistir, nos contate em algum dos canais
+                        abaixo.
                     </p>
-                    
+
                     <div className="flex flex-col gap-4 justify-center items-center mb-4">
                         <div className="flex flex-row">
                             <Instagram size={24} />

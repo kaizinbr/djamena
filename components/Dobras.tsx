@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Btn from "./CTA/Btn";
-import { BadgePercent, Hotel } from "lucide-react";
 
 function Dobra1() {
     return (
@@ -36,7 +35,7 @@ function Dobra1() {
                 >
                     <Image
                         src="/img1.jpg"
-                        alt="Sobre Nós"
+                        alt="Família de três pessoas. O pai carrega a filha nas costas e todos sorriem felizes e tranquilos em uma praia"
                         className={`
                             w-full rounded-lg shadow-lg
                         `}
@@ -55,7 +54,9 @@ function Dobra1() {
 
 function Dobra3() {
     return (
-        <div className={`py-20 w-full bg-[#1C3A60] col-span-full flex justify-center items-center`}>
+        <div
+            className={`py-20 w-full bg-[#1C3A60] col-span-full flex justify-center items-center`}
+        >
             <div
                 className={`
                     
@@ -75,7 +76,7 @@ function Dobra3() {
                 >
                     <Image
                         src="/pexels-cottonbro-3206081.jpg"
-                        alt="Sobre Nós"
+                        alt="Homem segurando seu telefone e sorrindo"
                         className="w-full  rounded-lg shadow-lg"
                         width={400}
                         height={400}
@@ -127,7 +128,7 @@ function Dobra2() {
                 >
                     <Image
                         src="/pexels-julieaagaard-20969831.jpg"
-                        alt="Sobre Nós"
+                        alt="Vista de hotel de luxo com piscina rodeada por cadeiras de banho e uma área verde bela e agrádavel"
                         className="w-full rounded-lg shadow-lg mb-8"
                         width={400}
                         height={400}
@@ -145,8 +146,6 @@ function Dobra2() {
                         pacote ideal para você.
                     </p>
                 </div>
-                {/* <h1 className="text-4xl font-bold mb-4">Curta mais gastando menos conosco!</h1> */}
-                {/* <Btn /> */}
             </div>
         </div>
     );
@@ -172,7 +171,7 @@ function Dobra4() {
                 >
                     <Image
                         src="/lastimg.jpg"
-                        alt="aaa"
+                        alt="Praia do Recife - PE, com vários banhistas se banhando e aproveitando o sol e o mar azul"
                         width={500}
                         height={500}
                         className={`
@@ -199,7 +198,7 @@ function Dobra4() {
                         memórias inesquecíveis e aproveitar cada momento da sua
                         viagem!
                     </p>
-                    <Btn className="mb-4" /> 
+                    <Btn className="mb-4" />
                 </div>
             </div>
         </div>
@@ -225,7 +224,6 @@ function Dobra5() {
                             do mercado
                         </span>
                     </div>
-                    {/* <Image src="/images/about-us.jpg" alt="Sobre Nós" className="w-96 rounded-lg shadow-lg mb-8" width={100} /> */}
                     <p className="text-base mb-4 montserrat-normal order-3 md:col-span-1 md:col-start-2">
                         Na Djamena, sabemos que uma viagem inesquecível não
                         precisa custar uma fortuna. É por isso que nos dedicamos
@@ -237,15 +235,15 @@ function Dobra5() {
                 </div>
                 <picture
                     className={`
-                    w-full
-                    mb-8 md:mb-0
-                    order-4 md:order-last md:row-start-1 md:col-start-1 md:row-span-3 m-auto
-                    flex justify-start items-center md:h-full
-                `}
+                        w-full
+                        mb-8 md:mb-0
+                        order-4 md:order-last md:row-start-1 md:col-start-1 md:row-span-3 m-auto
+                        flex justify-start items-center md:h-full
+                    `}
                 >
                     <Image
                         src="/pexels-leah-newhouse-50725-618902.jpg"
-                        alt="Sobre Nós"
+                        alt="Topo de castelo em parque da Disney envolto pelo céu azul"
                         className="min-w-96 w-full rounded-lg shadow-lg mb-8 md:mb-0"
                         width={400}
                         height={400}
@@ -259,11 +257,6 @@ function Dobra5() {
 function Dobra6() {
     return (
         <div className="py-24 relative col-span-full">
-            {/* <div className={`
-                absolute z-0 -left-32
-                -translate-y-1/2 rounded-full
-                bg-sky-600/60 h-[500px] w-48 -rotate-45 md:size-[650px] blur-[100px] mix-blend
-            `}></div> */}
             <div className="flex flex-col items-start justify-start h-full pt-24 z-10 px-4 relative">
                 <h1 className="text-4xl font-bold mb-8">
                     Quem viaja sozinho gasta cerca de{" "}
@@ -278,15 +271,13 @@ function Dobra6() {
                     viaja sozinho. Com a gente, você não paga nada a mais por
                     isso.
                 </p>
-                {/* <h1 className="text-4xl font-bold mb-4">Curta mais gastando menos conosco!</h1> */}
                 <Image
                     src="/img1.jpg"
-                    alt="Sobre Nós"
+                    alt="Família de três pessoas. O pai carrega a filha nas costas e todos sorriem felizes e tranquilos em uma praia"
                     className="min-w-96 w-full rounded-lg shadow-lg mb-8"
                     width={400}
                     height={400}
                 />
-
                 <Btn />
             </div>
         </div>

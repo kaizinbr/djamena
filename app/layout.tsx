@@ -4,12 +4,10 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 
 const sora = Sora({ subsets: ["latin"] });
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
     title: "Djamena Agency - Agência de Viagens",
     description: "Realize seu sonho de viajar agora mesmo!",
-
 };
 
 export default function RootLayout({
@@ -19,22 +17,20 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
-                <body
-                    className={
-                        sora.className +
+            <body
+                className={
+                    sora.className +
+                    `
+                            min-h-screen
+                            bg-slate-100
+                            flex
+                            justify-center
+                            items-center
                         `
-                min-h-screen
-                bg-slate-100
-                flex
-                justify-center
-                items-center
-            `
-                    }
-                >
-            <NextUIProvider locale="pt-br">
-                    {children}
-            </NextUIProvider>
-                </body>
+                }
+            >
+                <NextUIProvider locale="pt-br">{children}</NextUIProvider>
+            </body>
         </html>
     );
 }

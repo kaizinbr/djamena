@@ -1,10 +1,7 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
@@ -28,7 +25,7 @@ export default function Carousel() {
                 <SwiperSlide className="w-full p-3">
                     <div
                         className={`
-                            h-[560px] w-full md:w-[400px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex
+                            h-[560px] w-full md:w-[400px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex overflow-hidden
                         `}
                     >
                         <div className="m-auto p-4">
@@ -51,7 +48,7 @@ export default function Carousel() {
                 <SwiperSlide className="w-full flex justify-center items-center p-3">
                     <div
                         className={`
-                            h-[560px] w-full md:w-[600px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex
+                            h-[560px] w-full md:w-[600px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex overflow-hidden
                         `}
                     >
                         <div className="m-auto p-4">
@@ -71,7 +68,7 @@ export default function Carousel() {
                 <SwiperSlide className="w-full p-3">
                     <div
                         className={`
-                            h-[560px] w-full md:w-[400px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex
+                            h-[560px] w-full md:w-[400px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex overflow-hidden
                         `}
                     >
                         <div className="m-auto p-4">
@@ -101,7 +98,7 @@ export default function Carousel() {
                 <SwiperSlide className="w-full p-3">
                     <div
                         className={`
-                            h-[560px] w-full md:w-[400px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex
+                            h-[560px] w-full md:w-[400px] lg:w-[800px] bg-[#39B5FF] rounded-2xl flex overflow-hidden
                         `}
                     >
                         <div className="m-auto p-4">

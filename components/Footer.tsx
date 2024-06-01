@@ -1,7 +1,7 @@
-import { Instagram, Mail } from 'lucide-react';
+import { Instagram, Mail } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import Link from 'next/link';
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -16,12 +16,12 @@ export default function Footer() {
             >
                 <Image
                     src="/logo-djamena.jpg"
-                    alt='Logo da Djamena Agency'
+                    alt="Logo da Djamena Agency"
                     width={250}
                     height={250}
                 />
 
-                <div className="flex flex-col gap-4 justify-center items-center mb-4">
+                <div className="flex flex-col gap-4 justify-center items-center mb-2">
                     <div className="flex flex-row">
                         <Instagram size={24} />
                         <Link
@@ -37,7 +37,6 @@ export default function Footer() {
                         <Mail size={24} />
                         <a
                             href="mailto:djamenaviagens24@gmail.com"
-                            target="_blank"
                             rel="noreferrer"
                             className="ml-2"
                         >
@@ -45,7 +44,7 @@ export default function Footer() {
                         </a>
                     </div>
                     <div className="flex flex-row">
-                        <SiWhatsapp className='size-6' />
+                        <SiWhatsapp className="size-6" />
                         <Link
                             href="https://api.whatsapp.com/send?phone=5585987688781"
                             target="_blank"
@@ -57,13 +56,51 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <p className="text-sm mb-4">
-                    CNPJ: 52.984.076/0001-00
-                </p>
-                <p className="text-sm mb-8">
-                    © 2024 Djamena Agency. Todos os direitos reservados.
-                </p>
+                <div className="flex flex-col">
+                    <p className="text-sm mb-2">
+                        © 2024 Djamena Agency. Todos os direitos reservados.
+                    </p>
+                    <p className="text-sm mb-2">
+                        <Link
+                            href="/cadastur.png"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="ml-2 underline"
+                        >
+                            Estamos no Cadastur.
+                        </Link>{" "}
+                        CNPJ 52.984.076/0001-00
+                    </p>
+                    <Link
+                        href="mailto:kaiolucas1812@gmail.com?subject=Gostaria de notificar uma situação com direitos autorais"
+                        rel="noreferrer"
+                        className="mb-4 text-sm underline"
+                    >
+                        DMCA/LDA
+                    </Link>
+                    <p className="text-sm">
+                        <br />
+                        Feito por{" "}
+                        <Link
+                            href="https://www.instagram.com/soudigitalpb"
+                            target="_blank"
+                            rel="noreferrer"
+                            className=" underline"
+                        >
+                            Agência Sou Digital
+                        </Link>{" "}
+                        e{" "}
+                        <Link
+                            href="https://kaizin.com.br"
+                            target="_blank"
+                            rel="noreferrer"
+                            className=" underline"
+                        >
+                            Kaio Nunes.
+                        </Link>
+                    </p>
+                </div>
             </div>
         </footer>
     );
-};
+}

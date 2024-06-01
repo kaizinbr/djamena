@@ -5,10 +5,10 @@ export default function AboutUs() {
         <div className="py-24 col-span-full flex justify-center items-center bg-[#C5DDFF] text-[#001B41]">
             <div
                 className={`
-                h-full z-10 px-4 relative
-                grid grid-cols-1 md:grid-cols-2 gap-x-4 md:gap-x-8  
-                lg:max-w-screen-lg
-            `}
+                    h-full z-10 px-4 relative
+                    grid grid-cols-1 md:grid-cols-2 gap-x-4 md:gap-x-8  
+                    lg:max-w-screen-lg
+                `}
             >
                 <h1 className="text-4xl text-center font-bold mb-4 order-1 md:col-span-1 md:col-start-2">
                     Quem Somos
@@ -19,7 +19,6 @@ export default function AboutUs() {
                     viagens, estamos prontos para tornar sua viagem
                     inesquecível.
                 </p>
-                {/* <Image src="/images/about-us.jpg" alt="Sobre Nós" className="w-96 rounded-lg shadow-lg mb-8" width={100} /> */}
                 <p className="text-base text-center mb-8 montserrat-normal order-3 md:col-span-1 md:col-start-2">
                     Com anos de experiência no mercado de viagens, a Djamena se
                     dedica a transformar suas férias em momentos inesquecíveis.
@@ -30,10 +29,10 @@ export default function AboutUs() {
                 </p>
                 <picture
                     className={`
-                    w-full
-                    order-4 md:order-last md:row-start-1 md:col-start-1 md:row-span-3 m-auto
-                    flex justify-start items-center md:h-full
-                `}
+                        w-full
+                        order-4 md:order-last md:row-start-1 md:col-start-1 md:row-span-3 m-auto
+                        flex justify-start items-center md:h-full
+                    `}
                 >
                     <Image
                         src="/logo-djamena.jpg"

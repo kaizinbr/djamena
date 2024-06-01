@@ -1,20 +1,19 @@
-// import { Navbar } from "@nextui-org/react";
-import Image from "next/image";
-
-import Navbar from "@/components/Navbar";
 import AboutUs from "@/components/AboutUs";
 import Feedbacks from "@/components/Feedbacks";
-import { Dobra1, Dobra2, Dobra3, Dobra4, Dobra5, Dobra6 } from "@/components/Dobras";
-import Teste from "@/components/Teste";
+import {
+    Dobra1,
+    Dobra2,
+    Dobra3,
+    Dobra4,
+    Dobra5,
+    Dobra6,
+} from "@/components/Dobras";
 import Btn from "@/components/CTA/Btn";
-import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
         <>
-            {/* <Navbar /> */}
-
             <main
                 className={`
                 min-h-screen w-full flex-col items-center justify-center
@@ -24,12 +23,16 @@ export default function Home() {
                 
             `}
             >
-                <div className={`
+                <div
+                    className={`
                     bg-neutral-100 flex flex-col items-center justify-center
                     p-4 col-span-full text-center text-[#1765d6]
                     h-16
-                `}>
-                    <h2 className="text-2xl font-bold w-full">Djamena Agency</h2>
+                `}
+                >
+                    <h2 className="text-2xl font-bold w-full">
+                        Djamena Agency
+                    </h2>
                 </div>
                 <div
                     className={`
@@ -48,25 +51,27 @@ export default function Home() {
                         px-4 text-neutral-100 pt-32 h-full w-full
                         bg-black bg-opacity-10
                     `}
-                    ><div className="flex flex-col lg:max-w-screen-lg mx-auto">
-                        
+                    >
+                        <div className="flex flex-col lg:max-w-screen-lg mx-auto">
                             <h1
                                 className={`
                                 text-4xl sora font-bold tracking-tighter text-color
                                 md:text-5xl lg:text-6xl
                             `}
                             >
-                                Embarque para o seu {" "}
-                                <span>destino</span>!
+                                Embarque para o seu <span>destino</span>!
                             </h1>
-                            <p className={`
+                            <p
+                                className={`
                                 text-lg mt-6 mb-8 montserrat-normal
                                 md:text-xl lg:text-2xl
-                            `}>
-                                Os melhores destinos estão ao seu alcance, aqui transformamos seus sonhos em realidade!
+                            `}
+                            >
+                                Os melhores destinos estão ao seu alcance, aqui
+                                transformamos seus sonhos em realidade!
                             </p>
                             <Btn />
-                    </div>
+                        </div>
                     </div>
                 </div>
                 <Dobra1 />

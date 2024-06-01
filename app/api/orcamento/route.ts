@@ -1,7 +1,4 @@
-import next, { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
 import { type NextRequest } from "next/server";
-import axios from "axios";
 
 export async function POST(request: NextRequest) {
     try {
@@ -9,9 +6,7 @@ export async function POST(request: NextRequest) {
         const data = await request.formData();
         console.log("Data received:", data);
 
-        // Send the data as JSON using axios
-        // const response = await axios.post("https://agencia.iddas.com.br/orcamento/solicitacao/nova/NzBac0ZlY1p0WG5wWkJHM2xINDRsQT09", data);
-
+        // envia a requisição para o site da iddas
         const response = await fetch(
             "https://agencia.iddas.com.br/orcamento/solicitacao/nova/NzBac0ZlY1p0WG5wWkJHM2xINDRsQT09",
             {
@@ -19,9 +14,8 @@ export async function POST(request: NextRequest) {
                 body: data,
             }
         ).then((res) => res.json());
-        console.log(response);
-        // Return the response data as JSON
-        return Response.json(response);
+        // console.log(response);
+        return Response.json(response); // return the response from the iddas website, com sucesso: "S" ou "N"
     } catch (error) {
         // Handle any errors that occur during the request
         console.error("Error occurred during search:");
