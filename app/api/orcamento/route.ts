@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
 
         // envia a requisição para o site da iddas
         const response = await fetch(
-            "https://agencia.iddas.com.br/orcamento/solicitacao/nova/NzBac0ZlY1p0WG5wWkJHM2xINDRsQT09",
+            "https://agencia.iddas.com.br/orcamento/solicitacao/nova/ZTJrSGlaZzZEcTFSVjQ1d2lDK0dOQT09",
             {
                 method: "POST",
                 body: data,
