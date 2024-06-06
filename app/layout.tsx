@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, Lato } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
+import GoogleTagManager from "@/components/custom/GoogleTagManages";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -17,6 +18,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
+            <head>
+                
+                <GoogleTagManager containerId="GTM-TSRSDD94" />
+            </head>
             <body
                 className={
                     sora.className +
