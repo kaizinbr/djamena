@@ -57,10 +57,10 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col">
-                    <p className="text-sm mb-2">
+                    <p className="text-xs mb-2">
                         © 2024 Djamena Agency. Todos os direitos reservados.
                     </p>
-                    <p className="text-sm mb-2">
+                    <p className="text-xs mb-2">
                         <Link
                             href="/cadastur.png"
                             target="_blank"
@@ -74,11 +74,11 @@ export default function Footer() {
                     <Link
                         href="mailto:kaiolucas1812@gmail.com?subject=Gostaria de notificar uma situação com direitos autorais"
                         rel="noreferrer"
-                        className="mb-4 text-sm underline"
+                        className="mb-4 text-xs underline"
                     >
                         DMCA/LDA
                     </Link>
-                    <p className="text-sm">
+                    <p className="text-xs">
                         <br />
                         Feito por{" "}
                         <Link
