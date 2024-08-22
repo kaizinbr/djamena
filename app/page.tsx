@@ -37,12 +37,12 @@ export default function Home() {
                 <div
                     className={`
                         w-full  flex flex-col items-start justify-between
-                        h-[calc(100vh-64px)] lg:min-h-[800px]
+                        h-[calc(100vh-64px)] max-h-[2000px] lg:min-h-[800px]
                         z-30
                         col-span-full
                         
-                        bg-[url('/bg4.jpg')] bg-cover
-                        bg-no-repeat bg-scroll bg-center
+                        bg-[url('/bg4.jpg')] md:bg-[url('/bg5.png')] bg-cover
+                        bg-no-repeat bg-scroll bg-bottom
                     `}
                 >
                     <div

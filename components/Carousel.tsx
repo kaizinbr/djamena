@@ -15,6 +15,7 @@ export default function Carousel() {
                 pagination={{
                     type: "bullets",
                 }}
+                
                 navigation={false}
                 modules={[Pagination, Navigation]}
                 centeredSlides={true}
