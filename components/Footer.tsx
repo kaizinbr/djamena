@@ -15,10 +15,11 @@ export default function Footer() {
             `}
             >
                 <Image
-                    src="/logo-djamena.jpg"
+                    src="/djamena-logo1.png"
                     alt="Logo da Djamena Agency"
                     width={250}
                     height={250}
+                    className="rounded-lg"
                 />
 
                 <div className="flex flex-col gap-4 justify-center items-center mb-2">

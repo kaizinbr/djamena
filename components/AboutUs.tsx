@@ -42,11 +42,11 @@ export default function AboutUs() {
                     `}
                 >
                     <Image
-                        src="/logo-djamena.jpg"
+                        src="/djamena-logo1.png"
                         alt="Logo da Djamena Agency"
                         width={400}
                         height={400}
-                        className="m-auto"
+                        className="m-auto rounded-lg"
                     />
                 </picture>
             </div>

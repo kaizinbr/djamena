@@ -20,7 +20,7 @@ export const metadata: Metadata = {
             "Djamena Agency - Venha viajar conosco!",
         images: [
             {
-                url: "https://www.djamenaagency.com.br/logo-djamena.jpg", // MUDAR !!!!
+                url: "https://www.djamenaagency.com.br/djamena-logo1.png", // MUDAR !!!!
                 width: 500,
                 height: 500,
                 alt: "logo djamena agency",
