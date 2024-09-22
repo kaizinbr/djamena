@@ -37,11 +37,11 @@ export default function Footer() {
                     <div className="flex flex-row">
                         <Mail size={24} />
                         <a
-                            href="mailto:djamenaviagens24@gmail.com"
+                            href="mailto:contato@djamenaagency.com.br"
                             rel="noreferrer"
                             className="ml-2"
                         >
-                            djamenaviagens24@gmail.com
+                            contato@djamenaagency.com.br
                         </a>
                     </div>
                     <div className="flex flex-row">
