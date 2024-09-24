@@ -8,22 +8,22 @@ import SmoothWrapper from "@/components/SmoothWrapper";
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Djamena Agency - Agência de Viagens",
+    title: "Djamena Viagens - Agência de Viagens",
     description: "Realize seu sonho de viajar agora mesmo!",
     openGraph: {
         type: "website",
         locale: "pt_BR",
         url: "https://djamenaagency.com.br",
-        siteName: "Djamena Agency",
-        title: "Djamena Agency",
+        siteName: "Djamena Viagens",
+        title: "Djamena Viagens",
         description:
-            "Djamena Agency - Venha viajar conosco!",
+            "Djamena Viagens - Venha viajar conosco!",
         images: [
             {
                 url: "https://www.djamenaagency.com.br/djamena-logo1.png", // MUDAR !!!!
                 width: 500,
                 height: 500,
-                alt: "logo djamena agency",
+                alt: "logo Djamena Viagens",
             },
         ],
     }

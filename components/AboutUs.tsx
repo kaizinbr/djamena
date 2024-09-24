@@ -43,7 +43,7 @@ export default function AboutUs() {
                 >
                     <Image
                         src="/djamena-logo1.png"
-                        alt="Logo da Djamena Agency"
+                        alt="Logo da Djamena Viagens"
                         width={400}
                         height={400}
                         className="m-auto rounded-lg"

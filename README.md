@@ -1,1 +1,1 @@
-Esta é uma landing page para a agência de viagens Djamena Agency. O projeto foi desenvolvido com Next.js, React e estilizado com Tailwind CSS e a biblioteca NextUI.
+Esta é uma landing page para a agência de viagens Djamena Viagens. O projeto foi desenvolvido com Next.js, React e estilizado com Tailwind CSS e a biblioteca NextUI.

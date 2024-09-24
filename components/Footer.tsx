@@ -16,7 +16,7 @@ export default function Footer() {
             >
                 <Image
                     src="/djamena-logo1.png"
-                    alt="Logo da Djamena Agency"
+                    alt="Logo da Djamena Viagens"
                     width={250}
                     height={250}
                     className="rounded-lg"
@@ -59,7 +59,7 @@ export default function Footer() {
 
                 <div className="flex flex-col">
                     <p className="text-xs mb-2">
-                        © 2024 Djamena Agency. Todos os direitos reservados.
+                        © 2024 Djamena Viagens. Todos os direitos reservados.
                     </p>
                     <p className="text-xs mb-2">
                         <Link

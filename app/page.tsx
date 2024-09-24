@@ -31,7 +31,7 @@ export default function Home() {
                 `}
                 >
                     <h2 className="text-2xl font-bold w-full">
-                        Djamena Agency
+                        Djamena Viagens
                     </h2>
                 </div>
                 <div
