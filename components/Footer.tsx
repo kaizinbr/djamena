@@ -72,13 +72,6 @@ export default function Footer() {
                         </Link>{" "}
                         CNPJ 52.984.076/0001-00
                     </p>
-                    <Link
-                        href="mailto:kaiolucas1812@gmail.com?subject=Gostaria de notificar uma situação com direitos autorais"
-                        rel="noreferrer"
-                        className="mb-4 text-xs underline"
-                    >
-                        DMCA/LDA
-                    </Link>
                     <p className="text-xs">
                         <br />
                         Feito por{" "}
