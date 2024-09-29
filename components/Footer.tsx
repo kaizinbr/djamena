@@ -15,7 +15,7 @@ export default function Footer() {
             `}
             >
                 <Image
-                    src="/djamena-logo1.png"
+                    src="/DJAMENA-LOGOV1.webp"
                     alt="Logo da Djamena Viagens"
                     width={250}
                     height={250}

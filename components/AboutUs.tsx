@@ -42,7 +42,7 @@ export default function AboutUs() {
                     `}
                 >
                     <Image
-                        src="/djamena-logo1.png"
+                        src="/DJAMENA-LOGOV1.webp"
                         alt="Logo da Djamena Viagens"
                         width={400}
                         height={400}
