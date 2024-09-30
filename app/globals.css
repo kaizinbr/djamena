@@ -297,6 +297,10 @@ p{
     height: 100%;
 }
 
+.mySwiperBanner {
+    height: 500px !important;
+}
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;

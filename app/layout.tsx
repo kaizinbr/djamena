@@ -4,6 +4,7 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import GoogleTagManager from "@/components/custom/GoogleTagManages";
 import SmoothWrapper from "@/components/SmoothWrapper";
+import Menu from "@/components/core/NavBar";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -44,7 +45,7 @@ export default function RootLayout({
                     sora.className +
                     `
                             min-h-screen
-                            bg-slate-100
+                            bg-white
                             flex
                             justify-center
                             items-center
@@ -52,7 +53,9 @@ export default function RootLayout({
                 }
             >
                 <NextUIProvider locale="pt-br">
-                    <SmoothWrapper>{children}</SmoothWrapper>
+                    <SmoothWrapper>
+                        <Menu />
+                        {children}</SmoothWrapper>
                 </NextUIProvider>
             </body>
         </html>

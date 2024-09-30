@@ -16,7 +16,7 @@ export default function Btn({ className } : { className?: string }) {
             whileTap={{ scale: 0.9 }}
             href="/orcamento"
         >
-            <p className="font-bold text-lg px-4 py-3 rounded-md">Reserve agora</p>
+            <p className="font-bold text-lg px-4 py-3 rounded-md">Orçamento</p>
         </motion.a>
     );
 }

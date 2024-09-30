@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-        <div className="py-24 col-span-full flex justify-center items-center bg-[#C5DDFF] text-[#001B41]">
+        <div className="py-24 col-span-full flex justify-center w-full items-center bg-[#FEAE01] text-white" >
             <div
                 className={`
                     h-full z-10 px-4 relative
-                    grid grid-cols-6 md:grid-cols-12 gap-x-4 md:gap-x-8  
-                    lg:max-w-screen-lg lg:px-0 w-full
+                    flex flex-col gap-x-4 md:gap-x-8  
+                    lg:max-w-lg w-full
                 `}
             >
                 <div
@@ -16,25 +16,41 @@ export default function AboutUs() {
                             flex flex-col items-center justify-center
                         `}
                 >
-                    <h1 className="text-4xl text-center col-span-6 font-bold mb-4">
-                        Quem Somos
+                    <h1 className="text-4xl text-center col-span-6 font-bold mb-4 underline underline-offset-8">
+                        Sobre nós
                     </h1>
                     <p className="text-base text-center col-span-6 mb-8 montserrat-normal">
-                        Somos uma agência de viagens especializada em proporcionar
-                        experiências incríveis. Com uma equipe apaixonada por
-                        viagens, estamos prontos para tornar sua viagem
-                        inesquecível.
+                        Somos uma agência de viagens especializada em
+                        proporcionar experiências incríveis. Com uma equipe
+                        apaixonada por viagens, estamos prontos para tornar sua
+                        viagem inesquecível.
                     </p>
-                    <p className="text-base text-center col-span-6 md:mb-0 mb-8 montserrat-normal">
+                    {/* <p className="text-base text-center col-span-6 md:mb-0 mb-8 montserrat-normal">
                         Com anos de experiência no mercado de viagens, a Djamena se
                         dedica a transformar suas férias em momentos inesquecíveis.
                         Oferecemos um atendimento personalizado e suporte completo
                         em todas as etapas da sua viagem, do planejamento ao
                         check-in, para que você possa relaxar e aproveitar cada
                         momento!
-                    </p>
+                    </p> */}
+                    <button
+                        className={`
+                            bg-[#1C3A60]
+                            rounded-lg p-[3px]
+                            w-full text-neutral-100
+                            flex items-center justify-center
+                            
+                        `}
+                        // animate={{ scale: 1 }}
+                        // whileTap={{ scale: 0.9 }}
+                        // href="/orcamento"
+                    >
+                        <p className="font-bold text-lg px-4 py-3 rounded-md">
+                            Saiba mais
+                        </p>
+                    </button>
                 </div>
-                <picture
+                {/* <picture
                     className={`
                         w-full
                         order-4 md:order-last col-span-6 md:col-start-1 md:row-start-1 m-auto
@@ -48,7 +64,7 @@ export default function AboutUs() {
                         height={400}
                         className="m-auto rounded-lg"
                     />
-                </picture>
+                </picture> */}
             </div>
         </div>
     );

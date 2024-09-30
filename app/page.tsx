@@ -10,31 +10,181 @@ import {
 } from "@/components/Dobras";
 import Btn from "@/components/CTA/Btn";
 import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
+import { MapPin, Plane, Ticket } from "lucide-react";
 
 export default function Home() {
     return (
         <>
             <main
                 className={`
-                min-h-screen w-full flex-col items-center justify-center
-                grid 
-                grid-cols-2 md:grid-cols-6
+                min-h-screen w-screen 
+                flex flex-col items-center justify-start
+                
                 gap-x-4 md:gap-x-8
                 
             `}
             >
-                <div
-                    className={`
-                    bg-neutral-100 flex flex-col items-center justify-center
-                    p-4 col-span-full text-center text-[#1765d6]
-                    h-16
-                `}
-                >
-                    <h2 className="text-2xl font-bold w-full">
-                        Djamena Viagens
-                    </h2>
+                <Banner />
+
+                <Dobra1 />
+                <AboutUs />
+                <div className="w-full flex h-6"></div>
+                <div className="py-12 col-span-full flex justify-center items-center bg-stone-200 w-full ">
+                    <div
+                        className={`
+                            h-full z-10 px-8 gap-6 relative
+                            flex flex-row items-center justify-center 
+                            lg:max-w-3xl
+                        `}
+                    >
+                        <div className="size-16">
+                            <MapPin size={32} />
+                        </div>
+                        <div
+                            className={`
+                            text-base text-center col-span-6 montserrat-normal order-3 md:col-span-6 md:col-start-7
+                            flex flex-col items-center justify-center
+                        `}
+                        >
+                            <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
+                                Ponto de destaque
+                            </h1>
+                            <p className="text-sm text-center col-span-6 montserrat-normal">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Eaque corrupti nobis error
+                                blanditiis repudiandae minus, necessitatibus
+                                praesentium laboriosam libero rem esse. Minus
+                                facilis facere dolore, perspiciatis at error
+                                laborum fuga.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div
+                <div className="w-full flex h-6"></div>
+                <div className="py-12 col-span-full flex justify-center items-center bg-stone-200 w-full ">
+                    <div
+                        className={`
+                            h-full z-10 px-8 gap-6 relative
+                            flex flex-row items-center justify-center 
+                            lg:max-w-3xl
+                        `}
+                    >
+                        <div className="size-16">
+                            <MapPin size={32} />
+                        </div>
+                        <div
+                            className={`
+                            text-base text-center col-span-6 montserrat-normal order-3 md:col-span-6 md:col-start-7
+                            flex flex-col items-center justify-center
+                        `}
+                        >
+                            <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
+                                Ponto de destaque
+                            </h1>
+                            <p className="text-sm text-center col-span-6 montserrat-normal">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Eaque corrupti nobis error
+                                blanditiis repudiandae minus, necessitatibus
+                                praesentium laboriosam libero rem esse. Minus
+                                facilis facere dolore, perspiciatis at error
+                                laborum fuga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full flex h-6"></div>
+                <div className="py-12 col-span-full flex justify-center items-center bg-stone-200 w-full ">
+                    <div
+                        className={`
+                            h-full z-10 px-8 gap-6 relative
+                            flex flex-row items-center justify-center 
+                            lg:max-w-3xl
+                        `}
+                    >
+                        <div className="size-16">
+                            <MapPin size={32} />
+                        </div>
+                        <div
+                            className={`
+                            text-base text-center col-span-6 montserrat-normal order-3 md:col-span-6 md:col-start-7
+                            flex flex-col items-center justify-center
+                        `}
+                        >
+                            <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
+                                Ponto de destaque
+                            </h1>
+                            <p className="text-sm text-center col-span-6 montserrat-normal">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Eaque corrupti nobis error
+                                blanditiis repudiandae minus, necessitatibus
+                                praesentium laboriosam libero rem esse. Minus
+                                facilis facere dolore, perspiciatis at error
+                                laborum fuga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <Dobra4 />
+
+                <div className="py-12 px-8 col-span-full flex flex-col justify-center items-center ">
+                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8">
+                        Nossos serviços
+                    </h1>
+                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-[#FEAE01]">
+                            <Plane size={64} />
+                        <div className="flex flex-col gap-4">
+                            <h2 className="text-2xl font-bold">Serviço 1</h2>
+                            <p className="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-6 mb-6 p-8 items-end w-full rounded-lg shadow-md bg-[#FEAE01]">
+                            <Ticket size={64} />
+                        <div className="flex flex-col gap-4">
+                            <h2 className="text-2xl font-bold text-right">Serviço 2</h2>
+                            <p className="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-[#FEAE01]">
+                            <Plane size={64} />
+                        <div className="flex flex-col gap-4">
+                            <h2 className="text-2xl font-bold">Serviço 3</h2>
+                            <p className="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-6 mb-6 p-8 items-end w-full rounded-lg shadow-md bg-[#FEAE01]">
+                            <Ticket size={64} />
+                        <div className="flex flex-col gap-4">
+                            <h2 className="text-2xl font-bold text-right">Serviço 4</h2>
+                            <p className="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-[#FEAE01]">
+                            <Plane size={64} />
+                        <div className="flex flex-col gap-4">
+                            <h2 className="text-2xl font-bold">Serviço 5</h2>
+                            <p className="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* <div
                     className={`
                         w-full  flex flex-col items-start justify-between
                         h-[calc(100vh-64px)] max-h-[2000px] lg:min-h-[800px]
@@ -63,7 +213,7 @@ export default function Home() {
                             </h1>
                             <p
                                 className={`
-                                text-lg mt-6 mb-8 montserrat-normal
+                                text-lg mt-6 montserrat-normal
                                 md:text-xl lg:text-2xl
                             `}
                             >
@@ -74,13 +224,11 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <Dobra1 />
-                <AboutUs />
                 <Dobra2 />
                 <Dobra3 />
                 <Dobra5 />
                 <Feedbacks />
-                <Dobra4 />
+                <Dobra4 /> */}
                 <Footer />
             </main>
         </>

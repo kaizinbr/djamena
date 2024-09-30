@@ -6,25 +6,25 @@ function Dobra1() {
         <div className="py-24 relative col-span-full flex justify-center items-center">
             <div
                 className={`
-                h-full pt-24 z-10 px-4 relative
-                grid grid-cols-1 md:grid-cols-2 gap-x-4 md:gap-x-8
-                lg:max-w-screen-lg
+                h-full  z-10 px-10 relative
+                flex flex-col gap-4 md:gap-x-8
+                max-w-lg
             `}
             >
-                <h1 className="text-4xl font-bold mb-8 order-1 md:col-span-1 md:col-start-1">
-                    Por que Escolher a{" "}
-                    <span className="bg-[#39B5FF] px-1 rounded-md text-stone-100">
-                        Djamena
-                    </span>
-                    ?
-                </h1>
+                {/* <h1 className="text-4xl text-center font-bold mb-8 order-1 md:col-span-1 md:col-start-1">
+                    Djamena Agency
+                </h1> */}
+                <h2 className="text-xl text-center font mb-24 order-1 md:col-span-1 md:col-start-1">
+                    Os melhores destinos estão ao seu alcance, aqui
+                    transformamos seus sonhos em realidade!
+                </h2>
 
-                <p className="text-base text-start mb-4 montserrat-normal order-2 md:col-span-1 md:col-start-1">
+                {/* <p className="text-base text-start mb-4 montserrat-normal order-2 md:col-span-1 md:col-start-1">
                     Na Djamena, nós entendemos que cada viagem é única e merece
                     ser inesquecível. É por isso que nos dedicamos a oferecer
                     uma experiência diferenciada, desde o primeiro contato até o
                     seu retorno para casa.
-                </p>
+                </p> */}
                 <picture
                     className={`
                     w-full
@@ -44,7 +44,7 @@ function Dobra1() {
                     />
                 </picture>
 
-                <div className="w-full order-4 md:order-3 md:col-span-1 md:col-start-1">
+                <div className="w-full order-4 md:order-3 md:col-span-1 ">
                     <Btn />
                 </div>
             </div>
@@ -153,50 +153,21 @@ function Dobra2() {
 
 function Dobra4() {
     return (
-        <div className="py-24 relative col-span-full flex justify-center items-center">
+        <div className="py-24 relative col-span-full w-full flex justify-center items-center">
             <div
                 className={`
-                h-full pt-24 z-10 px-4 relative
-                grid grid-cols-1 md:grid-cols-2 gap-x-4 md:gap-x-8
-                lg:max-w-screen-lg
+                h-full pt-24 z-10 px-8 relative
+                flex flex-col gap-x-4 md:gap-x-8
+                lg:max-w-3xl
             `}
             >
-                <picture
-                    className={`
-                    w-full
-                    mb-8 md:mb-0
-                    order-3 md:order-last md:row-start-1 md:col-start-2 md:row-span-3 m-auto
-                    flex justify-start items-center md:h-full
-                `}
-                >
-                    <Image
-                        src="/lastimg.jpg"
-                        alt="Praia do Recife - PE, com vários banhistas se banhando e aproveitando o sol e o mar azul"
-                        width={500}
-                        height={500}
-                        className={`
-                            w-full  rounded-lg shadow-lg mb-8
-                        `}
-                    />
-                </picture>
                 <div className="flex flex-col md:row-span-3 items-center justify-center order-1 md:col-span-1 md:col-start-1">
-                    <h1 className={`text-4xl font-bold mb-8 w-full`}>
-                        Hora de decidir seu
-                        <br />
-                        <span
-                            className={`bg-[#39B5FF] px-1 rounded-md text-stone-100`}
-                        >
-                            destino
-                        </span>
-                        !
+                    <h1 className={`text-4xl text-center font-bold mb-8 w-full underline underline-offset-8`}>
+                        Decida seu destino
                     </h1>
                     <p className="text-base text-start mb-4 montserrat-normal">
                         Escolher a Djamena é escolher um parceiro dedicado a
-                        transformar sua viagem dos sonhos em realidade.
-                        Deixe-nos cuidar de todos os detalhes para que você
-                        possa se concentrar no que realmente importa: criar
-                        memórias inesquecíveis e aproveitar cada momento da sua
-                        viagem!
+                        transformar sua viagem dos sonhos em realidade.!
                     </p>
                     <Btn className="mb-4" />
                 </div>
