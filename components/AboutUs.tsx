@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-        <div className="py-24 col-span-full flex justify-center w-full items-center bg-[#FEAE01] text-white" >
+        <div className="py-24 col-span-full flex justify-center w-full items-center bg-primary text-white" >
             <div
                 className={`
-                    h-full z-10 px-4 relative
+                    h-full z-10 px-8 relative
                     flex flex-col gap-x-4 md:gap-x-8  
                     lg:max-w-lg w-full
                 `}
@@ -35,10 +35,12 @@ export default function AboutUs() {
                     </p> */}
                     <button
                         className={`
-                            bg-[#1C3A60]
-                            rounded-lg p-[3px]
-                            w-full text-neutral-100
-                            flex items-center justify-center
+                            bg-white border-2 border-white
+                            rounded-xl p-[3px]
+                            w-full text-primary font-bold
+                            flex items-center justify-center 
+                            hover:bg-transparent hover:text-white 
+                            transition-all duration-300
                             
                         `}
                         // animate={{ scale: 1 }}
@@ -46,7 +48,7 @@ export default function AboutUs() {
                         // href="/orcamento"
                     >
                         <p className="font-bold text-lg px-4 py-3 rounded-md">
-                            Saiba mais
+                            Quem somos
                         </p>
                     </button>
                 </div>

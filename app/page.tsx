@@ -11,6 +11,7 @@ import {
 import Btn from "@/components/CTA/Btn";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import Relatos from "@/components/Relatos";
 import { MapPin, Plane, Ticket } from "lucide-react";
 
 export default function Home() {
@@ -29,160 +30,181 @@ export default function Home() {
 
                 <Dobra1 />
                 <AboutUs />
-                <div className="w-full flex h-6"></div>
-                <div className="py-12 col-span-full flex justify-center items-center bg-stone-200 w-full ">
-                    <div
-                        className={`
+                <div className="w-full flex flex-col gap-6 p-8 max-w-lg m-auto">
+                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center bg-[#f7ca96] w-full ">
+                        <div
+                            className={`
                             h-full z-10 px-8 gap-6 relative
                             flex flex-row items-center justify-center 
                             lg:max-w-3xl
                         `}
-                    >
-                        <div className="size-16">
-                            <MapPin size={32} />
-                        </div>
-                        <div
-                            className={`
+                        >
+                            <div className="size-16">
+                                <MapPin size={32} />
+                            </div>
+                            <div
+                                className={`
                             text-base text-center col-span-6 montserrat-normal order-3 md:col-span-6 md:col-start-7
                             flex flex-col items-center justify-center
                         `}
-                        >
-                            <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
-                                Ponto de destaque
-                            </h1>
-                            <p className="text-sm text-center col-span-6 montserrat-normal">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Eaque corrupti nobis error
-                                blanditiis repudiandae minus, necessitatibus
-                                praesentium laboriosam libero rem esse. Minus
-                                facilis facere dolore, perspiciatis at error
-                                laborum fuga.
-                            </p>
+                            >
+                                <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
+                                    Ponto de destaque
+                                </h1>
+                                <p className="text-sm text-center col-span-6 montserrat-normal">
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Eaque corrupti nobis error
+                                    blanditiis repudiandae minus.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="w-full flex h-6"></div>
-                <div className="py-12 col-span-full flex justify-center items-center bg-stone-200 w-full ">
-                    <div
-                        className={`
+                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center bg-[#f7ca96] w-full ">
+                        <div
+                            className={`
                             h-full z-10 px-8 gap-6 relative
                             flex flex-row items-center justify-center 
                             lg:max-w-3xl
                         `}
-                    >
-                        <div className="size-16">
-                            <MapPin size={32} />
-                        </div>
-                        <div
-                            className={`
+                        >
+                            <div className="size-16">
+                                <MapPin size={32} />
+                            </div>
+                            <div
+                                className={`
                             text-base text-center col-span-6 montserrat-normal order-3 md:col-span-6 md:col-start-7
                             flex flex-col items-center justify-center
                         `}
-                        >
-                            <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
-                                Ponto de destaque
-                            </h1>
-                            <p className="text-sm text-center col-span-6 montserrat-normal">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Eaque corrupti nobis error
-                                blanditiis repudiandae minus, necessitatibus
-                                praesentium laboriosam libero rem esse. Minus
-                                facilis facere dolore, perspiciatis at error
-                                laborum fuga.
-                            </p>
+                            >
+                                <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
+                                    Ponto de destaque
+                                </h1>
+                                <p className="text-sm text-center col-span-6 montserrat-normal">
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Eaque corrupti nobis error
+                                    blanditiis repudiandae minus.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="w-full flex h-6"></div>
-                <div className="py-12 col-span-full flex justify-center items-center bg-stone-200 w-full ">
-                    <div
-                        className={`
+                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center bg-[#f7ca96] w-full ">
+                        <div
+                            className={`
                             h-full z-10 px-8 gap-6 relative
                             flex flex-row items-center justify-center 
                             lg:max-w-3xl
                         `}
-                    >
-                        <div className="size-16">
-                            <MapPin size={32} />
-                        </div>
-                        <div
-                            className={`
+                        >
+                            <div className="size-16">
+                                <MapPin size={32} />
+                            </div>
+                            <div
+                                className={`
                             text-base text-center col-span-6 montserrat-normal order-3 md:col-span-6 md:col-start-7
                             flex flex-col items-center justify-center
                         `}
-                        >
-                            <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
-                                Ponto de destaque
-                            </h1>
-                            <p className="text-sm text-center col-span-6 montserrat-normal">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Eaque corrupti nobis error
-                                blanditiis repudiandae minus, necessitatibus
-                                praesentium laboriosam libero rem esse. Minus
-                                facilis facere dolore, perspiciatis at error
-                                laborum fuga.
-                            </p>
+                            >
+                                <h1 className="text-2xl text-center col-span-6 font-bold mb-4">
+                                    Ponto de destaque
+                                </h1>
+                                <p className="text-sm text-center col-span-6 montserrat-normal">
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Eaque corrupti nobis error
+                                    blanditiis repudiandae minus.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <Dobra4 />
 
-                <div className="py-12 px-8 col-span-full flex flex-col justify-center items-center ">
-                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8">
+                <div className="py-12 px-8 col-span-full flex flex-col justify-center items-center text-white">
+                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8 text-default-foreground">
                         Nossos serviços
                     </h1>
-                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-[#FEAE01]">
-                            <Plane size={64} />
+                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-primary">
+                        <Plane size={64} />
                         <div className="flex flex-col gap-4">
                             <h2 className="text-2xl font-bold">Serviço 1</h2>
                             <p className="text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, voluptas. Quisquam,
+                                voluptas.
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-6 mb-6 p-8 items-end w-full rounded-lg shadow-md bg-[#FEAE01]">
-                            <Ticket size={64} />
+                    <div className="flex flex-col gap-6 mb-6 p-8 items-end w-full rounded-lg shadow-md bg-primary">
+                        <Ticket size={64} />
                         <div className="flex flex-col gap-4">
-                            <h2 className="text-2xl font-bold text-right">Serviço 2</h2>
+                            <h2 className="text-2xl font-bold text-right">
+                                Serviço 2
+                            </h2>
                             <p className="text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, voluptas. Quisquam,
+                                voluptas.
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-[#FEAE01]">
-                            <Plane size={64} />
+                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-primary">
+                        <Plane size={64} />
                         <div className="flex flex-col gap-4">
                             <h2 className="text-2xl font-bold">Serviço 3</h2>
                             <p className="text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, voluptas. Quisquam,
+                                voluptas.
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-6 mb-6 p-8 items-end w-full rounded-lg shadow-md bg-[#FEAE01]">
-                            <Ticket size={64} />
+                    <div className="flex flex-col gap-6 mb-6 p-8 items-end w-full rounded-lg shadow-md bg-primary">
+                        <Ticket size={64} />
                         <div className="flex flex-col gap-4">
-                            <h2 className="text-2xl font-bold text-right">Serviço 4</h2>
+                            <h2 className="text-2xl font-bold text-right">
+                                Serviço 4
+                            </h2>
                             <p className="text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, voluptas. Quisquam,
+                                voluptas.
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-[#FEAE01]">
-                            <Plane size={64} />
+                    <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-primary">
+                        <Plane size={64} />
                         <div className="flex flex-col gap-4">
                             <h2 className="text-2xl font-bold">Serviço 5</h2>
                             <p className="text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quisquam, voluptas. Quisquam, voluptas.
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, voluptas. Quisquam,
+                                voluptas.
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <div className="w-full flex flex-col px-8 rounded-xl overflow-hidden gap-6 mb-8 max-w-lg m-auto">
+                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8 text-default-foreground">
+                        Alguns relatos
+                    </h1>
+                    <Relatos />
+                    <button
+                        className={`
+                            bg-primary border-2 border-primary
+                            rounded-xl p-[3px]
+                            w-full text-white font-bold
+                            flex items-center justify-center 
+                            hover:bg-transparent hover:text-primary 
+                            transition-all duration-300
+                            
+                        `}
+                    >
+                        <p className="font-bold text-lg px-4 py-3 rounded-md">
+                            Veja todos os relatos
+                        </p>
+                    </button>
+                </div>                
 
                 {/* <div
                     className={`

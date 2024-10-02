@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import './styles.css';
-import '../styles/Banner.module.css'
+import "../styles/Banner.module.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
@@ -20,15 +20,18 @@ export default function App() {
             <Swiper
                 pagination={{
                     dynamicBullets: true,
+                    clickable: true,
                 }}
                 modules={[Pagination]}
+                slidesPerView={'auto'}
                 spaceBetween={30}
-                className="mySwiperBanner bg-primary"
+                centeredSlides={true}
+                className="mySwiperBanner "
             >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide className="bg-[#f7ca96] rounded-xl w-10/12">Relato 1</SwiperSlide>
+                <SwiperSlide className="bg-[#f7ca96] rounded-xl w-10/12">Relato 2</SwiperSlide>
+                <SwiperSlide className="bg-[#f7ca96] rounded-xl w-10/12">Relato 3</SwiperSlide>
+                <SwiperSlide className="bg-[#f7ca96] rounded-xl w-10/12">Relato 4</SwiperSlide>
                 {/* <SwiperSlide>Slide 5</SwiperSlide>
                 <SwiperSlide>Slide 6</SwiperSlide>
                 <SwiperSlide>Slide 7</SwiperSlide>

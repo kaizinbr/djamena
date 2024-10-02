@@ -6,17 +6,19 @@ export default function Btn({ className } : { className?: string }) {
     return (
         <motion.a
             className={`
-                bg-[#1C3A60]
-                rounded-lg p-[3px]
-                w-full text-neutral-100
-                flex items-center justify-center
+                bg-primary border-2 border-primary
+                rounded-xl p-[3px]
+                w-full text-white font-bold
+                flex items-center justify-center 
+                hover:bg-transparent hover:text-primary 
+                transition-all duration-300
                 ${className}
             `}
             animate={{ scale: 1 }}
             whileTap={{ scale: 0.9 }}
             href="/orcamento"
         >
-            <p className="font-bold text-lg px-4 py-3 rounded-md">Orçamento</p>
+            <p className="font-bold text-lg px-4 py-3 rounded-md">Faça um orçamento</p>
         </motion.a>
     );
 }
