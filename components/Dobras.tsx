@@ -14,7 +14,7 @@ function Dobra1() {
                 {/* <h1 className="text-4xl text-center font-bold mb-8 order-1 md:col-span-1 md:col-start-1">
                     Djamena Agency
                 </h1> */}
-                <h2 className="text-xl text-center font mb-24 order-1 md:col-span-1 md:col-start-1">
+                <h2 className="text-xl text-center font mb-24 md:col-span-1 md:col-start-1">
                     Os melhores destinos estão ao seu alcance, aqui
                     transformamos seus sonhos em realidade!
                 </h2>
@@ -29,7 +29,7 @@ function Dobra1() {
                     className={`
                     w-full
                     mb-8 md:mb-0
-                    order-3 md:order-last md:row-start-1 md:col-start-2 md:row-span-3 m-auto
+                     md:row-start-1 md:col-start-2 md:row-span-3 m-auto
                     flex justify-start items-center md:h-full
                 `}
                 >
@@ -44,7 +44,7 @@ function Dobra1() {
                     />
                 </picture>
 
-                <div className="w-full order-4 md:order-3 md:col-span-1 ">
+                <div className="w-full  md:col-span-1 ">
                     <Btn />
                 </div>
             </div>

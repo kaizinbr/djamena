@@ -31,7 +31,7 @@ export default function Menu() {
             isBlurred={false}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            className="w-screen"
+            className="w-screen bg-[#273842]"
         >
 
             <NavbarContent className=" pr-3" justify="start">
@@ -42,7 +42,7 @@ export default function Menu() {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem className="">
-                    <Link color="foreground" href="#">
+                    <Link  href="#">
                         Home
                     </Link>
                 </NavbarItem>
@@ -52,17 +52,17 @@ export default function Menu() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
+                    <Link  href="#">
                         Missão
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
+                    <Link  href="#">
                         Depoimentos
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
+                    <Link  href="#">
                         Contato
                     </Link>
                 </NavbarItem>
@@ -76,7 +76,7 @@ export default function Menu() {
             <NavbarContent className="sm:block hidden" justify="end">
             </NavbarContent>
 
-            <NavbarMenu className="divide-y divide-neutral-600 gap-0">
+            <NavbarMenu className="bg-[#273842] gap-0">
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}
                         className={`

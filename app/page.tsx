@@ -31,7 +31,7 @@ export default function Home() {
                 <Dobra1 />
                 <AboutUs />
                 <div className="w-full flex flex-col gap-6 p-8 max-w-lg m-auto">
-                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center bg-[#f7ca96] w-full ">
+                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center border-2 border-white bg-transparent hover:border-primary hover:bg-primary transition-all duration-300 w-full ">
                         <div
                             className={`
                             h-full z-10 px-8 gap-6 relative
@@ -59,7 +59,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center bg-[#f7ca96] w-full ">
+                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center border-2 border-white bg-transparent hover:border-primary hover:bg-primary transition-all duration-300 w-full ">
                         <div
                             className={`
                             h-full z-10 px-8 gap-6 relative
@@ -87,7 +87,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center bg-[#f7ca96] w-full ">
+                    <div className="py-12 rounded-xl col-span-full flex justify-center items-center border-2 border-white bg-transparent hover:border-primary hover:bg-primary transition-all duration-300 w-full ">
                         <div
                             className={`
                             h-full z-10 px-8 gap-6 relative
@@ -120,7 +120,7 @@ export default function Home() {
                 <Dobra4 />
 
                 <div className="py-12 px-8 col-span-full flex flex-col justify-center items-center text-white">
-                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8 text-default-foreground">
+                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8 ">
                         Nossos serviços
                     </h1>
                     <div className="flex flex-col gap-6 mb-6 p-8 w-full rounded-lg shadow-md bg-primary">
@@ -185,7 +185,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full flex flex-col px-8 rounded-xl overflow-hidden gap-6 mb-8 max-w-lg m-auto">
-                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8 text-default-foreground">
+                    <h1 className="text-center font-bold text-4xl mb-8 underline underline-offset-8">
                         Alguns relatos
                     </h1>
                     <Relatos />

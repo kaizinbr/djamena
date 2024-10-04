@@ -45,7 +45,8 @@ export default function RootLayout({
                     sora.className +
                     `
                             min-h-screen
-                            bg-white
+                            bg-[#273842]
+                            text-white
                             flex
                             justify-center
                             items-center
